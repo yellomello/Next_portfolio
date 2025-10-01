@@ -80,6 +80,42 @@ export default function LogoCloud() {
                                     width="auto"
                                 />
                             </div>
+                            <div className="flex">
+                                <img
+                                    className="mx-auto h-9 w-auto "
+                                    src="/r.svg"
+                                    alt="r Logo"
+                                    height="16"
+                                    width="auto"
+                                />
+                            </div>
+                            <div className="flex">
+                                <img
+                                    className="mx-auto h-9 w-auto "
+                                    src="/r.svg"
+                                    alt="r Logo"
+                                    height="16"
+                                    width="auto"
+                                />
+                            </div>
+                            <div className="flex">
+                                <img
+                                    className="mx-auto h-9 w-auto "
+                                    src="/r.svg"
+                                    alt="r Logo"
+                                    height="16"
+                                    width="auto"
+                                />
+                            </div>
+                            <div className="flex">
+                                <img
+                                    className="mx-auto h-9 w-auto "
+                                    src="/r.svg"
+                                    alt="r Logo"
+                                    height="16"
+                                    width="auto"
+                                />
+                            </div>
 
                             
                             <div className="flex">
