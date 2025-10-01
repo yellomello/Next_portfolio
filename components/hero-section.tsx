@@ -7,6 +7,10 @@ import { TextEffect } from '@/components/ui/text-effect'
 import { AnimatedGroup } from '@/components/ui/animated-group'
 import { HeroHeader } from './header'
 import { TextLoop } from './motion-primitives/text-loop'
+import { TextScramble } from './motion-primitives/text-scramble' 
+// import { useState } from 'react';
+import { TextScrambleCustomTrigger } from './motion-primitives/text-scramble-custom-trigger'
+
 
 const transitionVariants = {
     item: {
@@ -104,7 +108,7 @@ export default function HeroSection() {
                                     </Link>
                                 </AnimatedGroup>
 
-                                <TextEffect
+                                {/* <TextEffect
                                     preset="fade-in-blur"
                                     speedSegment={0.3}
                                     as="h1"
@@ -112,16 +116,25 @@ export default function HeroSection() {
                                     Marc Hansel Thomas
                                     
                                 </TextEffect>
-                                <TextEffect
-                                    per="line"
+                                 */}
+
+                                <div className="mt-4">
+                                <TextScrambleCustomTrigger />
+                                </div>
+
+                                
+                                <TextEffect per="line" // or "word" if line isn't supported by your TextEffect
                                     preset="fade-in-blur"
                                     speedSegment={0.3}
                                     delay={0.5}
                                     as="p"
-                                    className="mx-auto mt-8 max-w-2xl text-balance text-lg">
-                                  Data Engineer | AI Engineer | Software Developer | Game Developer
-                                </TextEffect>
-                                
+                                    className="group mx-auto mt-8 max-w-2xl text-balance text-lg"
+                                    >
+                                    
+                                        Data Engineer | AI Engineer | Software Developer | Game Developer
+                                    
+                                    </TextEffect>
+
                                 <AnimatedGroup
                                     variants={{
                                         container: {
