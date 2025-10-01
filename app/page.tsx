@@ -9,6 +9,12 @@ import LogoCloud2 from "@/components/ui/logo-cloud2";
 import LogoCloudLarge from "@/components/ui/logo-cloud-large";
 import { MacOSDock } from "@/components/ui/shadcn-io/mac-os-dock";
 import {MacbookScroll} from "@/components/ui/macbook-scroll";
+// import { WorldMap } from "@/components/ui/world-map";
+import CardSliderFullPage  from "@/components/ui/logo-cloud-large-2";
+// import LogoCloudFullPage1 from "@/components/ui/logo-cloud-cards";
+import LogoCloudCards1 from "@/components/ui/logo-cloud-cards";
+
+
 export default function Home() {
   // Define your dock apps
   const sampleApps = [
@@ -51,6 +57,10 @@ export default function Home() {
       <LogoCloud2 />
       <LogoCloud />
       <MacbookScroll />
+      {/* <LogoCloudFullPage1 /> */}
+      <CardSliderFullPage />
+      <LogoCloudCards1 />
+      {/* <WorldMap /> */}
       <FooterSection />
     </>
   );
