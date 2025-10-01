@@ -8,7 +8,7 @@ import FooterSection from "@/components/footer";
 import LogoCloud2 from "@/components/ui/logo-cloud2";
 import LogoCloudLarge from "@/components/ui/logo-cloud-large";
 import { MacOSDock } from "@/components/ui/shadcn-io/mac-os-dock";
-
+import {MacbookScroll} from "@/components/ui/macbook-scroll";
 export default function Home() {
   // Define your dock apps
   const sampleApps = [
@@ -50,6 +50,7 @@ export default function Home() {
 
       <LogoCloud2 />
       <LogoCloud />
+      <MacbookScroll />
       <FooterSection />
     </>
   );
