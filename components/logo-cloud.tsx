@@ -82,27 +82,27 @@ export default function LogoCloud() {
                             </div>
                             <div className="flex">
                                 <img
-                                    className="mx-auto h-9 w-auto "
-                                    src="/r.svg"
-                                    alt="r Logo"
+                                    className="mx-auto h-9 w-auto scale-300"
+                                    src="/postman.svg"
+                                    alt="postman Logo"
                                     height="16"
                                     width="auto"
                                 />
                             </div>
                             <div className="flex">
                                 <img
-                                    className="mx-auto h-9 w-auto "
-                                    src="/r.svg"
-                                    alt="r Logo"
+                                    className="mx-auto h-9 w-auto scale-125 filter grayscale"
+                                    src="/jupyter.svg"
+                                    alt="jupyter Logo"
                                     height="16"
                                     width="auto"
                                 />
                             </div>
                             <div className="flex">
                                 <img
-                                    className="mx-auto h-9 w-auto "
-                                    src="/r.svg"
-                                    alt="r Logo"
+                                    className="mx-auto h-9 w-auto scale-300"
+                                    src="/mongo.svg"
+                                    alt="mongo Logo"
                                     height="16"
                                     width="auto"
                                 />
