@@ -14,6 +14,8 @@ import CardSliderFullPage  from "@/components/ui/logo-cloud-large-2";
 // import LogoCloudFullPage1 from "@/components/ui/logo-cloud-cards";
 import LogoCloudCards1 from "@/components/ui/logo-cloud-cards";
 import MLogo from "@/components/m-logo";
+import { MagnetLines } from "@/components/ui/magnet-lines";
+import { MagnetLinesHero } from "@/components/ui/magneticlineshero";
 
 export default function Home() {
   // Define your dock apps
@@ -43,6 +45,8 @@ export default function Home() {
 
   return (
     <>
+    <MagnetLinesHero />
+      {/* <MagnetLines /> */}
       <HeroSection />
       <MLogo size={72} withBackground={false} />
       <LogoCloudLarge />
