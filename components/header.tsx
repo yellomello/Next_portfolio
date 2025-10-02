@@ -83,7 +83,7 @@ export const HeroHeader = () => {
                                 </ul>
                             </div>
                             <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                                <Button
+                                {/* <Button
                                     asChild
                                     variant="outline"
                                     size="sm"
@@ -99,17 +99,17 @@ export const HeroHeader = () => {
                                     <Link href="#">
                                         <span>Sign Up</span>
                                     </Link>
-                                </Button>
+                                </Button> */}
                                 {/* <ModeToggle /> */}
                                 <AnimatedThemeToggler />
-                                <Button
+                                {/* <Button
                                     asChild
                                     size="sm"
                                     className={cn(isScrolled ? 'lg:inline-flex' : 'hidden')}>
                                     <Link href="#">
                                         <span>Get Started</span>
                                     </Link>
-                                </Button>
+                                </Button> */}
                             </div>
                         </div>
                     </div>
