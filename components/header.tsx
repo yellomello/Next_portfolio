@@ -5,7 +5,9 @@ import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import React from 'react'
 import { cn } from '@/lib/utils'
-import { ModeToggle } from './mode-toggle'
+// import { ModeToggle } from './mode-toggle'
+import MLogo from "@/components/m-logo";
+import { AnimatedThemeToggler } from './ui/animated-theme-toggler'
 
 const menuItems = [
     { name: 'Features', href: '#link' },
@@ -37,7 +39,7 @@ export const HeroHeader = () => {
                                 href="/"
                                 aria-label="home"
                                 className="flex items-center space-x-2">
-                                <Logo />
+                                <MLogo size={72}  />
                             </Link>
 
                             <button
@@ -95,8 +97,8 @@ export const HeroHeader = () => {
                                         <span>Sign Up</span>
                                     </Link>
                                 </Button>
-                                <ModeToggle />
-
+                                {/* <ModeToggle /> */}
+                                <AnimatedThemeToggler />
                                 <Button
                                     asChild
                                     size="sm"

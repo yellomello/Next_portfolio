@@ -13,7 +13,7 @@ import {MacbookScroll} from "@/components/ui/macbook-scroll";
 import CardSliderFullPage  from "@/components/ui/logo-cloud-large-2";
 // import LogoCloudFullPage1 from "@/components/ui/logo-cloud-cards";
 import LogoCloudCards1 from "@/components/ui/logo-cloud-cards";
-
+import MLogo from "@/components/m-logo";
 
 export default function Home() {
   // Define your dock apps
@@ -44,9 +44,11 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <MLogo size={72} withBackground={false} />
       <LogoCloudLarge />
 
       <main className="w-full h-screen bg-gray-900 flex items-center justify-center">
+        
         <MacOSDock
           apps={sampleApps}
           onAppClick={handleAppClick}
