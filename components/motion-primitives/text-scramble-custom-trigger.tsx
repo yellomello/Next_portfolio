@@ -13,7 +13,8 @@ export function TextScrambleCustomTrigger() {
       onMouseEnter={() => setIsTrigger(true)} // hover triggers scramble
     >
       <TextScramble
-        className="text-smmx-auto mt-8 max-w-4xl text-balance text-5xl max-md:font-semibold md:text-7xl lg:mt-16 xl:text-[5.25rem]"
+        className= "font-bold"
+        // className="text-smmx-auto mt-8 max-w-4xl text-balance text-5xl max-md:font-semibold md:text-7xl lg:mt-16 xl:text-[5.25rem]"
         as="span"
         speed={0.01}
         trigger={isTrigger}

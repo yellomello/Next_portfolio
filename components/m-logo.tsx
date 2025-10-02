@@ -31,14 +31,14 @@ export function MLogo({ size = 72, className, withBackground = true, title = "M 
         className={cn(
           "h-full w-full",
           // Default black text, white background
-          "text-black group-hover:text-black dark:text-white dark:group-hover:text-white",
+          "text-black group-hover:text-black",
           "transition-colors duration-300",
           // Hover glow
           "transition-[filter] ease-out will-change-filter group-hover:[filter:drop-shadow(0_0_8px_currentColor)_drop-shadow(0_0_16px_currentColor)]"
         )}
         aria-hidden="false"
       >
-        <title>{title}</title>
+        {/* <title>{title}</title> */}
 
         {withBackground ? (
           <rect
@@ -47,7 +47,7 @@ export function MLogo({ size = 72, className, withBackground = true, title = "M 
             width="84"
             height="84"
             rx="16"
-            className="transition-colors duration-300 fill-white group-hover:fill-black invert dark:fill-black dark:group-hover:fill-white"
+            className="transition-colors duration-300 fill-white group-hover:fill-black invert dark:fill-black dark:group-hover:fill-black"
           />
         ) : null}
 

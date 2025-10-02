@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils'
 // import { ModeToggle } from './mode-toggle'
 import MLogo from "@/components/m-logo";
 import { AnimatedThemeToggler } from './ui/animated-theme-toggler'
+import { TextScrambleCustomTrigger } from './motion-primitives/text-scramble-custom-trigger'
 
 const menuItems = [
     { name: 'Features', href: '#link' },
@@ -40,6 +41,8 @@ export const HeroHeader = () => {
                                 aria-label="home"
                                 className="flex items-center space-x-2">
                                 <MLogo size={72}  />
+                                {/* <h1> Marc Thomas</h1> */}
+                                <TextScrambleCustomTrigger />
                             </Link>
 
                             <button

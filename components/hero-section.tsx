@@ -119,7 +119,7 @@ export default function HeroSection() {
                                  */}
 
                                 <div className="mt-4">
-                                <TextScrambleCustomTrigger />
+                                {/* <TextScrambleCustomTrigger /> */}
                                 </div>
 
                                 
