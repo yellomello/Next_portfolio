@@ -45,32 +45,7 @@ export default function Home() {
     );
   };
 
-  const CODES = {
-  Cursor: `// Copy and paste the code into .cursor/mcp.json
-{
-  "mcpServers": {
-    "shadcn": {
-      "command": "npx",
-      "args": ["-y", "shadcn@canary", "registry:mcp"],
-      "env": {
-        "REGISTRY_URL": "@animate-ui/registry.json"
-      }
-    }
-  }
-}`,
-  Windsurf: `// Copy and paste the code into .codeium/windsurf/mcp_config.json
-{
-  "mcpServers": {
-    "shadcn": {
-      "command": "npx",
-      "args": ["-y", "shadcn@canary", "registry:mcp"],
-      "env": {
-        "REGISTRY_URL": "@animate-ui/registry.json"
-      }
-    }
-  }
-}`,
-};
+
 
   return (
     <>
@@ -78,7 +53,7 @@ export default function Home() {
       {/* <MagnetLines /> */}
       <HeroSection />
       <MLogo size={72} withBackground={false} />
-      <LogoCloudLarge />
+      {/* <LogoCloudLarge /> */}
 
       <main className="w-full h-screen bg-gray-900 relative">
   <div
@@ -92,14 +67,14 @@ export default function Home() {
   </div>
 </main>
 
-      <LogoCloud2 />
-      <CodeTabs codes={CODES} />
-      <LogoCloud />
-      <MacbookScroll />
       <Comparison_Example />
+      <LogoCloud2 />
+     
+      <LogoCloud />
+      {/* <MacbookScroll /> */}
       {/* <LogoCloudFullPage1 /> */}
       <CardSliderFullPage />
-      <LogoCloudCards1 />
+      {/* <LogoCloudCards1 /> */}
       {/* <WorldMap /> */}
       <FooterSection />
     </>

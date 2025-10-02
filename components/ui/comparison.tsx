@@ -3,7 +3,7 @@ import { Comparison, ComparisonHandle, ComparisonItem } from '@/components/ui/sh
 import Image from 'next/image';
 const Comparison_Example = () => (
   <Comparison className="aspect-video" mode="hover">
-    <ComparisonItem className="bg-red-500" position="left">
+    <ComparisonItem className="bg-stone-500" position="left">
       <Image
         alt="Placeholder 1"
         className="opacity-50"

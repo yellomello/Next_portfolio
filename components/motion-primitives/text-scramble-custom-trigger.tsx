@@ -26,7 +26,7 @@ export function TextScrambleCustomTrigger() {
                                             Marc Hansel Thomas
                                             
         </TextEffect> */}
-        Marc Hansel Thomas
+        Marc Thomas
                                         
       </TextScramble>
     </a>

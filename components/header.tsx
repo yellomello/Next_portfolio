@@ -11,10 +11,11 @@ import { AnimatedThemeToggler } from './ui/animated-theme-toggler'
 import { TextScrambleCustomTrigger } from './motion-primitives/text-scramble-custom-trigger'
 
 const menuItems = [
-    { name: 'Features', href: '#link' },
-    { name: 'Solution', href: '#link' },
-    { name: 'Pricing', href: '#link' },
     { name: 'About', href: '#link' },
+    { name: 'Projects', href: '#link' },
+    { name: 'Certifications', href: '#link' },
+    { name: 'Interests', href: '#link' },
+    { name: 'Resume', href: '#link' },
 ]
 
 export const HeroHeader = () => {
