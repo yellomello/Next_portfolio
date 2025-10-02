@@ -16,6 +16,7 @@ import LogoCloudCards1 from "@/components/ui/logo-cloud-cards";
 import MLogo from "@/components/m-logo";
 import { MagnetLines } from "@/components/ui/magnet-lines";
 import { MagnetLinesHero } from "@/components/ui/magneticlineshero";
+import { CodeTabs } from "@/components/animate-ui/components/animate/code-tabs";
 
 export default function Home() {
   // Define your dock apps
@@ -43,6 +44,33 @@ export default function Home() {
     );
   };
 
+  const CODES = {
+  Cursor: `// Copy and paste the code into .cursor/mcp.json
+{
+  "mcpServers": {
+    "shadcn": {
+      "command": "npx",
+      "args": ["-y", "shadcn@canary", "registry:mcp"],
+      "env": {
+        "REGISTRY_URL": "@animate-ui/registry.json"
+      }
+    }
+  }
+}`,
+  Windsurf: `// Copy and paste the code into .codeium/windsurf/mcp_config.json
+{
+  "mcpServers": {
+    "shadcn": {
+      "command": "npx",
+      "args": ["-y", "shadcn@canary", "registry:mcp"],
+      "env": {
+        "REGISTRY_URL": "@animate-ui/registry.json"
+      }
+    }
+  }
+}`,
+};
+
   return (
     <>
     <MagnetLinesHero />
@@ -51,16 +79,20 @@ export default function Home() {
       <MLogo size={72} withBackground={false} />
       <LogoCloudLarge />
 
-      <main className="w-full h-screen bg-gray-900 flex items-center justify-center">
-        
-        <MacOSDock
-          apps={sampleApps}
-          onAppClick={handleAppClick}
-          openApps={openApps}
-        />
-      </main>
+      <main className="w-full h-screen bg-gray-900 relative">
+  <div
+    className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50"
+  >
+    <MacOSDock
+      apps={sampleApps}
+      onAppClick={handleAppClick}
+      openApps={openApps}
+    />
+  </div>
+</main>
 
       <LogoCloud2 />
+      <CodeTabs codes={CODES} />
       <LogoCloud />
       <MacbookScroll />
       {/* <LogoCloudFullPage1 /> */}
