@@ -51,7 +51,7 @@ function MagnetLinesHero({
   const spans = Array.from({ length: total }, (_, i) => (
     <span
       key={i}
-      className="block origin-center bg-gray-400 dark:bg-white opacity-[0.05]"
+      className="block origin-center bg-gray-600 dark:bg-white opacity-10"
       style={{
         width: lineWidth,
         height: lineHeight,
