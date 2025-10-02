@@ -13,7 +13,8 @@ import { TextScrambleCustomTrigger } from './motion-primitives/text-scramble-cus
 import { Spotlight } from '@/components/motion-primitives/spotlight';
 
 import { CodeTabs } from "@/components/animate-ui/components/animate/code-tabs";
-
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Page2 from '@/app/dashboard/page'
 const CODES = {
   SQL: `-- Copy and paste into your SQL editor
 SELECT candidate_name
@@ -51,16 +52,21 @@ df.filter(
 
   Scala: `// Copy and paste into your Scala REPL
 object HireMarc extends App {
-  case class Candidate(candidate_name: String, skills: String, coolness: String, hire_decision: String)
+    case class Candidate(
+        candidate_name: String,
+        skills: String,
+        coolness: String,
+        hire_decision: String
+    )
 
-  val marc = Candidate("Marc Thomas", "MAX", "INFINITE", "YES")
+    val marc = Candidate("Marc Thomas", "MAX", "INFINITE", "YES")
 
-  if (marc.skills == "MAX" && marc.coolness == "INFINITE" && marc.hire_decision == "YES") {
-    println(s"Hire \${marc.candidate_name} immediately!")
-  }
-}
-`,
- "C++": `// Copy and paste into your C++ program
+    if (marc.skills == "MAX" && marc.coolness == "INFINITE" && marc.hire_decision == "YES") {
+        println(s"Hire \${marc.candidate_name} immediately!")
+    }
+}`,
+
+  "C++": `// Copy and paste into your C++ program
 #include <iostream>
 #include <string>
 using namespace std;
@@ -80,11 +86,11 @@ int main() {
     return 0;
 }`,
 
-  Output: `-- Output Tab
--- candidate_name
--- ---------------
--- Marc Thomas
--- Company revenue goes UP 📈`,
+  Output: (
+    <div className="w-full h-[500px] overflow-auto rounded-xl border p-4">
+      <Page2 />
+    </div>
+  ),
 };
 
 
