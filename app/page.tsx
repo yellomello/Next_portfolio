@@ -17,6 +17,7 @@ import MLogo from "@/components/m-logo";
 import { MagnetLines } from "@/components/ui/magnet-lines";
 import { MagnetLinesHero } from "@/components/ui/magneticlineshero";
 import { CodeTabs } from "@/components/animate-ui/components/animate/code-tabs";
+import Comparison_Example from "@/components/ui/comparison";
 
 export default function Home() {
   // Define your dock apps
@@ -95,6 +96,7 @@ export default function Home() {
       <CodeTabs codes={CODES} />
       <LogoCloud />
       <MacbookScroll />
+      <Comparison_Example />
       {/* <LogoCloudFullPage1 /> */}
       <CardSliderFullPage />
       <LogoCloudCards1 />
