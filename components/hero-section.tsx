@@ -10,7 +10,7 @@ import { TextLoop } from './motion-primitives/text-loop'
 import { TextScramble } from './motion-primitives/text-scramble' 
 // import { useState } from 'react';
 import { TextScrambleCustomTrigger } from './motion-primitives/text-scramble-custom-trigger'
-
+import { Spotlight } from '@/components/motion-primitives/spotlight';
 
 const transitionVariants = {
     item: {
@@ -148,6 +148,8 @@ export default function HeroSection() {
                                         ...transitionVariants,
                                     }}
                                     className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row">
+                                                                                    <Spotlight className='from-blue-600 via-blue-500 to-blue-400 blur-3xl dark:from-blue-200 dark:via-blue-300 dark:to-blue-400'size={124}/>
+
                                     <div
                                         key={1}
                                         className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5">
