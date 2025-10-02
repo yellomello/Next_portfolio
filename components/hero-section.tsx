@@ -12,6 +12,83 @@ import { TextScramble } from './motion-primitives/text-scramble'
 import { TextScrambleCustomTrigger } from './motion-primitives/text-scramble-custom-trigger'
 import { Spotlight } from '@/components/motion-primitives/spotlight';
 
+import { CodeTabs } from "@/components/animate-ui/components/animate/code-tabs";
+
+const CODES = {
+  SQL: `-- Copy and paste into your SQL editor
+SELECT candidate_name
+FROM candidate_pool
+WHERE candidate_name = "Marc Thomas"
+  AND skills = 'MAX'
+  AND coolness = 'INFINITE'
+HAVING hire_decision = 'YES';`,
+
+  Pandas: `# Copy and paste into a Python script
+import pandas as pd
+
+data = pd.DataFrame({
+    "candidate_name": ["Marc Thomas"],
+    "skills": ["MAX"],
+    "coolness": ["INFINITE"],
+    "hire_decision": ["YES"]
+})
+
+result = data.query("skills == 'MAX' and coolness == 'INFINITE' and hire_decision == 'YES'")
+result`,
+
+  PySpark: `# Copy and paste into a PySpark shell
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder.appName("HireMarc").getOrCreate()
+
+data = [("Marc Thomas", "MAX", "INFINITE", "YES")]
+columns = ["candidate_name", "skills", "coolness", "hire_decision"]
+
+df = spark.createDataFrame(data, columns)
+df.filter(
+    (df.skills == "MAX") & (df.coolness == "INFINITE") & (df.hire_decision == "YES")
+).show()`,
+
+  Scala: `// Copy and paste into your Scala REPL
+object HireMarc extends App {
+  case class Candidate(candidate_name: String, skills: String, coolness: String, hire_decision: String)
+
+  val marc = Candidate("Marc Thomas", "MAX", "INFINITE", "YES")
+
+  if (marc.skills == "MAX" && marc.coolness == "INFINITE" && marc.hire_decision == "YES") {
+    println(s"Hire \${marc.candidate_name} immediately!")
+  }
+}
+`,
+ "C++": `// Copy and paste into your C++ program
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string candidate_name = "Marc Thomas";
+    string skills = "MAX";
+    string coolness = "INFINITE";
+    string salary_expectation = "******";
+    string hire_decision = "YES";
+
+    if (candidate_name == "Marc Thomas" &&
+        skills == "MAX" &&
+        coolness == "INFINITE") {
+        cout << "Hire decision: " << hire_decision << endl;
+    }
+    return 0;
+}`,
+
+  Output: `-- Output Tab
+-- candidate_name
+-- ---------------
+-- Marc Thomas
+-- Company revenue goes UP 📈`,
+};
+
+
+
 const transitionVariants = {
     item: {
         hidden: {
@@ -118,9 +195,9 @@ export default function HeroSection() {
                                 </TextEffect>
                                  */}
 
-                                <div className="mt-4">
+                                {/* <div className="mt-4">
                                 <TextScrambleCustomTrigger />
-                                </div>
+                                </div> */}
 
                                 
                                 <TextEffect per="line" // or "word" if line isn't supported by your TextEffect
@@ -189,8 +266,12 @@ export default function HeroSection() {
                                 ...transitionVariants,
                             }}>
                             <div className="mask-b-from-55% relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20">
-                                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
-                                    <Image
+                                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 
+                bg-background relative mx-auto 
+                max-w-[90rem] w-full h-[700px]  /* make it wide + taller */
+                overflow-hidden rounded-3xl border p-6 
+                shadow-2xl shadow-zinc-950/20 ring-1">
+                                    {/* <Image
                                         className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
                                         src="/mail2.webp"
                                         alt="app screen"
@@ -203,7 +284,10 @@ export default function HeroSection() {
                                         alt="app screen"
                                         width="2700"
                                         height="1440"
-                                    />
+                                    /> */}
+                                    <div >
+          <CodeTabs codes={CODES} />
+        </div>
                                 </div>
                             </div>
                         </AnimatedGroup>
