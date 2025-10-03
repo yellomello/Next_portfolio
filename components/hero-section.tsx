@@ -13,6 +13,7 @@ import { TextScrambleCustomTrigger } from './motion-primitives/text-scramble-cus
 import { Spotlight } from '@/components/motion-primitives/spotlight';
 // import CometCard  from '/components/ui/comet-card'
 // import {GlowButton} from   '@/components/ui/shiny-button-1'
+// import SpotlightButton from "@/components/SpotlightButton.jsx"
 
 import { CodeTabs } from "@/components/animate-ui/components/animate/code-tabs";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -21,6 +22,11 @@ import { CometCard } from './ui/comet-card'
 import { CardSpotlight } from './ui/card-spotlight'
 import { ContainerTextFlipDemo } from './ui/container-text-flip-demo'
 import { Buttonborder } from "./ui/moving-border";
+import { ShimmerButton } from "@/components/ui/shimmer-button"
+import { InteractiveShimmerButton2 } from "@/components/ui/interactive-shimmer2";
+
+// import { ShimmerButton2 } from "@/components/ui/shimmer-button-2"
+
 // Define a simple Step component
 type StepProps = {
   title: string;
@@ -338,7 +344,7 @@ export default function HeroSection() {
         Contact Me
       </Buttonborder>
       </div> */}
-      <div className="flex justify-center mt-6">
+      {/* <div className="flex justify-center mt-6">
   <Buttonborder
     borderRadius="1.9rem"
     className="
@@ -360,8 +366,22 @@ export default function HeroSection() {
   >
     Contact Me
   </Buttonborder>
-</div>
+</div> */}
                         </div>
+                        <div className="flex justify-center mt-6">
+                         <InteractiveShimmerButton2
+  defaultText="Contact Me"
+  hoverText="Copy Email"
+  clickedText="Copied!"
+  copyText="your-email3@example.com"
+  shimmerColor="purple"
+  shimmerColor2="green"
+  shimmerDuration="2s"
+  className="shadow-2xl"
+/>
+
+    </div>
+                        
         {/* <GlowButton /> */}
                         <AnimatedGroup
                             variants={{

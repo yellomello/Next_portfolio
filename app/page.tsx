@@ -22,7 +22,10 @@ import {InfiniteQuotes} from "@/components/ui/infinitequotes";
 import { InfiniteCerts } from "@/components/ui/infintecerts";
 // import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
-
+import { GlowCard } from "@/components/spotlight-card";
+// import {GlowButton } from "@/components/spotlight-button";
+// import { InteractiveShimmerButton2 } from "@/components/ui/interactive-shimmer2";
+// import { InteractiveShimmerButton2 } from "@/components/ui/interactive-shimmer";
 
 
 export default function Home() {
@@ -60,7 +63,39 @@ export default function Home() {
       <HeroSection />
         <InfiniteQuotes />
       <MLogo size={72} withBackground={false} />
+      
+      
+      
+  
+
+
       {/* <LogoCloudLarge /> */}
+      <div className="w-screen h-screen flex flex-row items-center justify-center gap-10 custom-cursor">
+      <GlowCard></GlowCard>
+      <GlowCard></GlowCard>
+      <GlowCard></GlowCard>
+      <GlowCard></GlowCard>
+
+
+      {/* <InteractiveHoverButton >
+        Copy Email </InteractiveHoverButton> */}
+{/* <InteractiveHoverButton
+  beforeText="Contact Me"
+  afterText="Copy Email"
+  onClick={async () => {
+    try {
+      await navigator.clipboard.writeText("hanselmarc9@gmail.com")
+      alert("Email copied!") // or use a toast library
+    } catch (err) {
+      alert("Failed to copy email")
+    }
+  }}
+/> */}
+
+
+
+    </div>
+  
 
       <main className="w-full h-screen bg-gray-900 relative">
   {/* <div
@@ -85,7 +120,7 @@ export default function Home() {
       {/* <LogoCloudCards1 /> */}
       {/* <WorldMap /> */}
       <FooterSection />
- 
+
       
     </>
   );

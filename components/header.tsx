@@ -11,6 +11,7 @@ import { AnimatedThemeToggler } from './ui/animated-theme-toggler'
 import { TextScrambleCustomTrigger } from './motion-primitives/text-scramble-custom-trigger'
 import { Linkedin, Github } from 'lucide-react'
 import { FaLinkedin, FaGithub , FaEnvelope } from 'react-icons/fa'
+// import { toast } from "@/components/ui/use-toast"; // make sure you have this toast hook/component
 
 
 
