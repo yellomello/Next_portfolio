@@ -20,6 +20,10 @@ import { CodeTabs } from "@/components/animate-ui/components/animate/code-tabs";
 import Comparison_Example from "@/components/ui/comparison";
 import {InfiniteQuotes} from "@/components/ui/infinitequotes";
 import { InfiniteCerts } from "@/components/ui/infintecerts";
+// import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+
+
+
 
 export default function Home() {
   // Define your dock apps
@@ -54,11 +58,12 @@ export default function Home() {
     <MagnetLinesHero />
       {/* <MagnetLines /> */}
       <HeroSection />
+        <InfiniteQuotes />
       <MLogo size={72} withBackground={false} />
-      <LogoCloudLarge />
+      {/* <LogoCloudLarge /> */}
 
       <main className="w-full h-screen bg-gray-900 relative">
-  <div
+  {/* <div
     className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50"
   >
     <MacOSDock
@@ -66,12 +71,11 @@ export default function Home() {
       onAppClick={handleAppClick}
       openApps={openApps}
     />
-  </div>
+  </div> */}
 </main>
 
       {/* <Comparison_Example /> */}
-      <LogoCloud2 />
-      <InfiniteQuotes />
+      {/* <LogoCloud2 /> */}
       <InfiniteCerts />
      
       <LogoCloud />
@@ -81,6 +85,8 @@ export default function Home() {
       {/* <LogoCloudCards1 /> */}
       {/* <WorldMap /> */}
       <FooterSection />
+ 
+      
     </>
   );
 }

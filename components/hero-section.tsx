@@ -12,6 +12,7 @@ import { TextScramble } from './motion-primitives/text-scramble'
 import { TextScrambleCustomTrigger } from './motion-primitives/text-scramble-custom-trigger'
 import { Spotlight } from '@/components/motion-primitives/spotlight';
 // import CometCard  from '/components/ui/comet-card'
+// import {GlowButton} from   '@/components/ui/shiny-button-1'
 
 import { CodeTabs } from "@/components/animate-ui/components/animate/code-tabs";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -19,7 +20,7 @@ import Page2 from '@/app/dashboard/page'
 import { CometCard } from './ui/comet-card'
 import { CardSpotlight } from './ui/card-spotlight'
 import { ContainerTextFlipDemo } from './ui/container-text-flip-demo'
-
+import { Buttonborder } from "./ui/moving-border";
 // Define a simple Step component
 type StepProps = {
   title: string;
@@ -301,14 +302,21 @@ export default function HeroSection() {
                                     <div
                                         key={1}
                                         className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5">
-                                        <Button
+                                        
+                                        {/* <Button
                                             asChild
                                             size="lg"
                                             className="rounded-xl px-5 text-base">
                                             <Link href="#link">
                                                 <span className="text-nowrap">Contact Me</span>
                                             </Link>
-                                        </Button>
+                                        </Button> */}
+                                         {/* <Buttonborder
+        borderRadius="1.9rem"
+        className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+      >
+        Borders are cool
+      </Buttonborder> */}
                                     </div>
                                     {/* <Button
                                         key={2}
@@ -322,8 +330,39 @@ export default function HeroSection() {
                                     </Button> */}
                                 </AnimatedGroup>
                             </div>
+                            {/* <div className="flex justify-center mt-6">
+                            <Buttonborder
+        borderRadius="1.9rem"
+        className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+      >
+        Contact Me
+      </Buttonborder>
+      </div> */}
+      <div className="flex justify-center mt-6">
+  <Buttonborder
+    borderRadius="1.9rem"
+    className="
+      bg-white 
+      dark:bg-slate-500 
+      text-black 
+      dark:text-white 
+      border-neutral-200 
+      dark:border-slate-800
+      transition-all 
+      duration-300 
+      ease-in-out 
+      hover:scale-105 
+      hover:bg-gradient-to-r 
+      hover:from-purple-900 
+      hover:to-pink-300 
+      hover:text-white
+    "
+  >
+    Contact Me
+  </Buttonborder>
+</div>
                         </div>
-
+        {/* <GlowButton /> */}
                         <AnimatedGroup
                             variants={{
                                 container: {

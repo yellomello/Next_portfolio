@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 
 export function InfiniteQuotes() {
@@ -17,32 +17,50 @@ export function InfiniteQuotes() {
 
 const testimonials = [
   {
-    quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
+    quote: "The most dangerous phrase in the language is, ‘We’ve always done it this way.’",
+    name: "Grace Hopper",
+    title: "Computer Scientist",
   },
   {
-    quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
+    quote: "Mathematics is the art of giving the same name to different things.",
+    name: "Henri Poincaré",
+    title: "Mathematician",
   },
   {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
+    quote: "The best way to predict the future is to invent it.",
+    name: "Claude Shannon",
+    title: "Mathematician & Electrical Engineer",
   },
   {
-    quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
+    quote: "Science is a differential equation. Religion is a boundary condition.",
+    name: "Alan Turing",
+    title: "Mathematician & Computer Scientist",
   },
   {
-    quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
+    quote: "Information is the resolution of uncertainty.",
+    name: "Claude Shannon",
+    title: "Mathematician & Electrical Engineer",
   },
-];
+  {
+    quote: "Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less.",
+    name: "Marie Curie",
+    title: "Physicist & Chemist",
+  },
+
+ {
+    quote: "He who has a why to live can bear almost any how.",
+    name: "Friedrich Nietzsche",
+    title: "Philosopher",
+  },
+
+{
+    quote: "The question of whether a computer can think is no more interesting than the question of whether a submarine can swim.",
+    name: "Edsger W. Dijkstra",
+    title: "Computer Scientist",
+  },
+  {
+    quote: "We are drowning in information but starved for knowledge.",
+    name: "John Naisbitt",
+    title: "Futurist",
+  },
+  ];

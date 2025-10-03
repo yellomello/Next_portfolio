@@ -9,14 +9,20 @@ import { cn } from '@/lib/utils'
 import MLogo from "@/components/m-logo";
 import { AnimatedThemeToggler } from './ui/animated-theme-toggler'
 import { TextScrambleCustomTrigger } from './motion-primitives/text-scramble-custom-trigger'
+import { Linkedin, Github } from 'lucide-react'
+import { FaLinkedin, FaGithub , FaEnvelope } from 'react-icons/fa'
+
+
 
 const menuItems = [
     { name: 'About', href: '#link' },
     { name: 'Projects', href: '#link' },
     { name: 'Certifications', href: '#link' },
     { name: 'Interests', href: '#link' },
-    { name: 'Resume', href: '#link' },
+    { name: 'Resume', href: 'https://drive.google.com/file/d/1Mjz5lEsKy5WWG1OK0Tqrpj61F3x9OMpd/view?usp=sharing' },
 ]
+
+
 
 export const HeroHeader = () => {
     const [menuState, setMenuState] = React.useState(false)
@@ -83,6 +89,32 @@ export const HeroHeader = () => {
                                     ))}
                                 </ul>
                             </div>
+           
+
+<div className="flex items-center gap-3 text-2xl">
+  <a href="https://www.linkedin.com/in/marchanselthomas/" target="_blank" rel="noreferrer" className="text-[#0A66C2] hover:opacity-80">
+    <FaLinkedin />
+  </a>
+  <a
+  href="https://github.com/yellomello"
+  target="_blank"
+  rel="noreferrer"
+  className="text-black dark:text-white hover:opacity-80"
+>
+  <FaGithub />
+</a>
+<button
+    onClick={() => {
+      navigator.clipboard.writeText('hanselmarc9@gmail.com');
+      alert('Email copied to clipboard!');
+    }}
+    className="text-red-500 hover:opacity-80"
+    aria-label="Copy email"
+  >
+    <FaEnvelope />
+  </button>
+</div>
+
                             <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                                 {/* <Button
                                     asChild
