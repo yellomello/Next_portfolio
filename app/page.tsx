@@ -18,6 +18,8 @@ import { MagnetLines } from "@/components/ui/magnet-lines";
 import { MagnetLinesHero } from "@/components/ui/magneticlineshero";
 import { CodeTabs } from "@/components/animate-ui/components/animate/code-tabs";
 import Comparison_Example from "@/components/ui/comparison";
+import {InfiniteQuotes} from "@/components/ui/infinitequotes";
+import { InfiniteCerts } from "@/components/ui/infintecerts";
 
 export default function Home() {
   // Define your dock apps
@@ -53,7 +55,7 @@ export default function Home() {
       {/* <MagnetLines /> */}
       <HeroSection />
       <MLogo size={72} withBackground={false} />
-      {/* <LogoCloudLarge /> */}
+      <LogoCloudLarge />
 
       <main className="w-full h-screen bg-gray-900 relative">
   <div
@@ -67,13 +69,15 @@ export default function Home() {
   </div>
 </main>
 
-      <Comparison_Example />
+      {/* <Comparison_Example /> */}
       <LogoCloud2 />
+      <InfiniteQuotes />
+      <InfiniteCerts />
      
       <LogoCloud />
       {/* <MacbookScroll /> */}
       {/* <LogoCloudFullPage1 /> */}
-      <CardSliderFullPage />
+      {/* <CardSliderFullPage /> */}
       {/* <LogoCloudCards1 /> */}
       {/* <WorldMap /> */}
       <FooterSection />

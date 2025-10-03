@@ -11,10 +11,38 @@ import { TextScramble } from './motion-primitives/text-scramble'
 // import { useState } from 'react';
 import { TextScrambleCustomTrigger } from './motion-primitives/text-scramble-custom-trigger'
 import { Spotlight } from '@/components/motion-primitives/spotlight';
+// import CometCard  from '/components/ui/comet-card'
 
 import { CodeTabs } from "@/components/animate-ui/components/animate/code-tabs";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Page2 from '@/app/dashboard/page'
+import { CometCard } from './ui/comet-card'
+import { CardSpotlight } from './ui/card-spotlight'
+import { ContainerTextFlipDemo } from './ui/container-text-flip-demo'
+
+// Define a simple Step component
+type StepProps = {
+  title: string;
+};
+
+function Step({ title }: StepProps) {
+  return (
+    <li className="flex items-center gap-2 mb-1">
+      <span className="inline-block w-2 h-2 rounded-full bg-blue-400" />
+      <span>{title}</span>
+    </li>
+  );
+}
+
+
+
+
+
+
+
+
+
+//###########################################################################################################################
 const CODES = {
   SQL: `-- Copy and paste into your SQL editor
 SELECT candidate_name
@@ -204,19 +232,56 @@ export default function HeroSection() {
                                 {/* <div className="mt-4">
                                 <TextScrambleCustomTrigger />
                                 </div> */}
+                                {/* <CometCard className="bg-white/10 p-8 text-white">
+       <Image
+          src="/my-photo.jpg" // put your image inside public/my-photo.jpg
+          alt="My Photo"
+          width={320}
+          height={224}
+          className="h-full w-full object-cover rounded-2xl"
+        />
+      </CometCard> */}
+    <div className="flex gap-6 items-center">
+  <CardSpotlight className="h-96 w-74 p-4 flex items-center justify-center overflow-hidden">
+    <img
+      src="/my_face_dark.jpg"
+      alt="My face"
+      className="max-w-full max-h-full object-contain rounded-lg"
+    />
+  </CardSpotlight>
+
+  <ContainerTextFlipDemo />
+</div>
+
+
+
+
 
                                 
-                                <TextEffect per="line" // or "word" if line isn't supported by your TextEffect
-                                    preset="fade-in-blur"
-                                    speedSegment={0.3}
-                                    delay={0.5}
-                                    as="p"
-                                    className="group mx-auto mt-8 max-w-2xl text-balance text-lg"
-                                    >
-                                    
-                                        Data Engineer | AI Engineer | Software Developer | Game Developer
-                                    
-                                    </TextEffect>
+                                <TextEffect
+  per="line"
+  preset="fade-in-blur"
+  speedSegment={0.3}
+  delay={0.5}
+  as="p"
+  className="group mx-auto mt-8 max-w-2xl text-balance text-lg"
+>
+  Currently open for roles in Canada only.
+  If you are a founder or an engineer looking to bring down Google, we already have a lot in common. Let's hop on a zoom meeting.
+</TextEffect>
+
+<TextEffect
+  per="line"
+  preset="fade-in-blur"
+  speedSegment={0.3}
+  delay={0.9} // slightly delayed for emphasis
+  as="p"
+  className="group mx-auto mt-2 max-w-2xl text-balance text-lg italic"
+>
+  If you are from Google, you might wanna watch out. - Marc Thomas
+   
+</TextEffect>
+
 
                                 <AnimatedGroup
                                     variants={{
@@ -241,11 +306,11 @@ export default function HeroSection() {
                                             size="lg"
                                             className="rounded-xl px-5 text-base">
                                             <Link href="#link">
-                                                <span className="text-nowrap">Start Building</span>
+                                                <span className="text-nowrap">Contact Me</span>
                                             </Link>
                                         </Button>
                                     </div>
-                                    <Button
+                                    {/* <Button
                                         key={2}
                                         asChild
                                         size="lg"
@@ -254,7 +319,7 @@ export default function HeroSection() {
                                         <Link href="#link">
                                             <span className="text-nowrap">Request a demo</span>
                                         </Link>
-                                    </Button>
+                                    </Button> */}
                                 </AnimatedGroup>
                             </div>
                         </div>
