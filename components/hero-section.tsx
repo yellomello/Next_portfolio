@@ -26,6 +26,7 @@ import { ShimmerButton } from "@/components/ui/shimmer-button"
 import { InteractiveShimmerButton2 } from "@/components/ui/interactive-shimmer2";
 import { GlowCard } from "@/components/spotlight-card";
 // import { ShimmerButton2 } from "@/components/ui/shimmer-button-2"
+import SchemaVisualizer from "@/components/schema-viz";
 
 // Define a simple Step component
 type StepProps = {
@@ -426,7 +427,13 @@ export default function HeroSection() {
                                         height="1440"
                                     /> */}
                                     <div >
-          <CodeTabs codes={CODES} />
+          {/* <CodeTabs codes={CODES} /> */}
+        <div className="min-h-svh flex flex-col">
+              {/* <Header /> */}
+              <SchemaVisualizer />
+            </div>
+        
+        
         </div>
                                 </div>
                             </div>

@@ -26,6 +26,7 @@ import { GlowCard } from "@/components/spotlight-card";
 // import {GlowButton } from "@/components/spotlight-button";
 // import { InteractiveShimmerButton2 } from "@/components/ui/interactive-shimmer2";
 // import { InteractiveShimmerButton2 } from "@/components/ui/interactive-shimmer";
+import SchemaVisualizer from "@/components/schema-viz";
 
 
 export default function Home() {
@@ -62,6 +63,7 @@ export default function Home() {
       {/* <MagnetLines /> */}
       <HeroSection />
         <InfiniteQuotes />
+        
       <MLogo size={72} withBackground={false} />
       
     
