@@ -21,7 +21,7 @@ import Comparison_Example from "@/components/ui/comparison";
 import {InfiniteQuotes} from "@/components/ui/infinitequotes";
 import { InfiniteCerts } from "@/components/ui/infintecerts";
 // import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
-
+// import Simple from "@/components/motion-primitives/rivecomp"
 import { GlowCard } from "@/components/spotlight-card";
 // import {GlowButton } from "@/components/spotlight-button";
 // import { InteractiveShimmerButton2 } from "@/components/ui/interactive-shimmer2";
@@ -64,9 +64,7 @@ export default function Home() {
         <InfiniteQuotes />
       <MLogo size={72} withBackground={false} />
       
-      
-      
-  
+    
 
 
       {/* <LogoCloudLarge /> */}

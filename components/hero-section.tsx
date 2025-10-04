@@ -24,7 +24,7 @@ import { ContainerTextFlipDemo } from './ui/container-text-flip-demo'
 import { Buttonborder } from "./ui/moving-border";
 import { ShimmerButton } from "@/components/ui/shimmer-button"
 import { InteractiveShimmerButton2 } from "@/components/ui/interactive-shimmer2";
-
+import { GlowCard } from "@/components/spotlight-card";
 // import { ShimmerButton2 } from "@/components/ui/shimmer-button-2"
 
 // Define a simple Step component
@@ -249,13 +249,23 @@ export default function HeroSection() {
         />
       </CometCard> */}
     <div className="flex gap-6 items-center">
-  <CardSpotlight className="h-96 w-74 p-4 flex items-center justify-center overflow-hidden">
+  {/* <CardSpotlight className="h-96 w-74 p-4 flex items-center justify-center overflow-hidden">
     <img
       src="/my_face_dark.jpg"
       alt="My face"
       className="max-w-full max-h-full object-contain rounded-lg"
     />
-  </CardSpotlight>
+  </CardSpotlight> */}
+ <GlowCard className="h-96 w-74 p-4 flex items-center justify-center">
+  <div className="overflow-hidden rounded-lg w-full h-full flex items-center justify-center">
+    <img
+      src="/my_face_dark.jpg"
+      alt="My face"
+      className="w-full h-full object-contain rounded-2xl"
+    />
+  </div>
+</GlowCard>
+
 
   <ContainerTextFlipDemo />
 </div>
