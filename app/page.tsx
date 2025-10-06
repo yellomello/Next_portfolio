@@ -1,6 +1,6 @@
 'use client';
 
-
+import { ParticleTextEffect } from "@/components/interactive-text-particle";
 import React, { useState } from "react";
 import HeroSection from "@/components/hero-section";
 import LogoCloud from "@/components/logo-cloud";
@@ -27,7 +27,9 @@ import { GlowCard } from "@/components/spotlight-card";
 // import { InteractiveShimmerButton2 } from "@/components/ui/interactive-shimmer2";
 // import { InteractiveShimmerButton2 } from "@/components/ui/interactive-shimmer";
 import SchemaVisualizer from "@/components/schema-viz";
+import { ImageSwiper  } from "@/components/image-swiper";
 
+const imageUrls = "https://img.freepik.com/premium-photo/3d-cartoon_975306-1.jpg?w=2000,https://img.freepik.com/premium-photo/3d-cartoon-boy-avatar_113255-5540.jpg,https://th.bing.com/th/id/OIP.OmBLyKbo8iixJ2SeS12xxwHaE7?w=626&h=417&rs=1&pid=ImgDetMain,https://thumbs.dreamstime.com/b/animated-academic-cheerful-cartoon-scholar-301088562.jpg,https://img.freepik.com/premium-psd/3d-cute-young-business-man-character-generative-ai_43614-1027.jpg,https://img.freepik.com/premium-photo/arafed-cartoon-man-suit-tie-standing-with-his-hands-his-hips_988987-15581.jpg";
 
 export default function Home() {
   // Define your dock apps
@@ -62,11 +64,17 @@ export default function Home() {
     <MagnetLinesHero />
       {/* <MagnetLines /> */}
       <HeroSection />
-        <InfiniteQuotes />
         
       <MLogo size={72} withBackground={false} />
       
-    
+      <ParticleTextEffect
+        text="PROJECTS"
+        // className="absolute top-0 left-0"
+        // colors={['ff6b6b', 'feca57', '48dbfb', '1dd1a1']}
+          colors = {['f8f9fa', 'ff9ff3', '9b5de5', '4a69bd', '341f97', '706fd3', 'c56cf0', '54a0ff', 'ffffff']}
+// colors = ['f8f9fa', 'ff9ff3', '9b5de5', '4a69bd', '341f97', '706fd3', 'c56cf0', '54a0ff', 'ffffff'];
+
+      />
 
 
       {/* <LogoCloudLarge /> */}
@@ -88,8 +96,8 @@ export default function Home() {
       alert("Email copied!") // or use a toast library
     } catch (err) {
       alert("Failed to copy email")
-    }
-  }}
+      }
+      }}
 /> */}
 
 
@@ -100,19 +108,31 @@ export default function Home() {
       <main className="w-full h-screen bg-gray-900 relative">
   {/* <div
     className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50"
-  >
+    >
     <MacOSDock
-      apps={sampleApps}
-      onAppClick={handleAppClick}
-      openApps={openApps}
+    apps={sampleApps}
+    onAppClick={handleAppClick}
+    openApps={openApps}
     />
-  </div> */}
+    </div> */}
 </main>
 
       {/* <Comparison_Example /> */}
       {/* <LogoCloud2 /> */}
+
+     {/* <div className="flex items-center justify-center min-h-screen">
+      <ImageSwiper images={imageUrls} />
+      </div> */}
+<ParticleTextEffect
+        text="Certifications"
+        // className="absolute top-0 left-0"
+        // colors={['ff6b6b', 'feca57', '48dbfb', '1dd1a1']}
+          colors = {['f8f9fa', 'ff9ff3', '9b5de5', '4a69bd', '341f97', '706fd3', 'c56cf0', '54a0ff', 'ffffff']}
+// colors = ['f8f9fa', 'ff9ff3', '9b5de5', '4a69bd', '341f97', '706fd3', 'c56cf0', '54a0ff', 'ffffff'];
+
+      />
       <InfiniteCerts />
-     
+
       <LogoCloud />
       {/* <MacbookScroll /> */}
       {/* <LogoCloudFullPage1 /> */}
@@ -120,8 +140,11 @@ export default function Home() {
       {/* <LogoCloudCards1 /> */}
       {/* <WorldMap /> */}
       <FooterSection />
+      <InfiniteQuotes />
 
       
     </>
   );
 }
+
+

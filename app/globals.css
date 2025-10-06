@@ -43,6 +43,7 @@
   --radius-xl: calc(var(--radius) + 4px);
   --animate-shimmer-slide: shimmer-slide var(--speed) ease-in-out infinite alternate;
   --animate-spin-around: spin-around calc(var(--speed) * 2) infinite linear;
+  --radius: var(----radius);
   @keyframes shimmer-slide {
   to {
     transform: translate(calc(100cqw - 100%), 0);

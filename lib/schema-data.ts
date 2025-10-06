@@ -1,150 +1,175 @@
 import type { Node, Edge } from "@xyflow/react";
 
-// Define the initial nodes (tables)
+// 🌟 The Optimistic Job Application Database (Fully Connected Edition)
 export const initialNodes: Node[] = [
   {
-    id: "users",
+    id: "candidates",
     type: "tableNode",
-    position: { x: 800, y: 150 },
+    position: { x: 850, y: 120 },
     data: {
-      label: "users",
+      label: "candidates",
       fields: [
         { name: "id", type: "int", isPrimary: true },
         { name: "full_name", type: "varchar" },
         { name: "email", type: "varchar" },
-        { name: "gender", type: "varchar" },
-        { name: "date_of_birth", type: "date" },
-        { name: "country_code", type: "varchar", isForeign: true },
-        { name: "created_at", type: "timestamp" },
+        { name: "skills", type: "json" },
+        { name: "dream_role", type: "varchar" },
+        { name: "portfolio_link", type: "varchar" },
+        { name: "confidence_level", type: "decimal" },
+        { name: "applied_role_id", type: "int", isForeign: true },
+        { name: "hired_company_id", type: "int", isForeign: true },
       ],
     },
   },
   {
-    id: "orders",
+    id: "job_postings",
     type: "tableNode",
-    position: { x: 450, y: 183 },
+    position: { x: 480, y: 180 },
     data: {
-      label: "orders",
+      label: "job_postings",
       fields: [
         { name: "id", type: "int", isPrimary: true },
-        { name: "user_id", type: "int", isForeign: true },
-        { name: "status", type: "varchar" },
-        { name: "total_amount", type: "decimal" },
-        { name: "created_at", type: "timestamp" },
+        { name: "title", type: "varchar" },
+        { name: "department", type: "varchar" },
+        { name: "skills_required", type: "json" },
+        { name: "salary_range", type: "varchar" },
+        { name: "hr_id", type: "int", isForeign: true },
+        { name: "company_id", type: "int", isForeign: true },
+        // { name: "posted_at", type: "timestamp" },
       ],
     },
   },
   {
-    id: "order_items",
+    id: "recruiters",
     type: "tableNode",
     position: { x: 100, y: 150 },
     data: {
-      label: "order_items",
-      fields: [
-        { name: "id", type: "int", isPrimary: true },
-        { name: "order_id", type: "int", isForeign: true },
-        { name: "product_id", type: "int", isForeign: true },
-        { name: "quantity", type: "int" },
-        { name: "unit_price", type: "decimal" },
-      ],
-    },
-  },
-  {
-    id: "products",
-    type: "tableNode",
-    position: { x: 100, y: 460 },
-    data: {
-      label: "products",
-      fields: [
-        { name: "id", type: "int", isPrimary: true },
-        { name: "merchant_id", type: "int", isForeign: true },
-        { name: "name", type: "varchar" },
-        { name: "description", type: "text" },
-        { name: "price", type: "decimal" },
-        { name: "status", type: "varchar" },
-        { name: "created_at", type: "timestamp" },
-      ],
-    },
-  },
-  {
-    id: "merchants",
-    type: "tableNode",
-    position: { x: 450, y: 493 },
-    data: {
-      label: "merchants",
+      label: "recruiters",
       fields: [
         { name: "id", type: "int", isPrimary: true },
         { name: "name", type: "varchar" },
         { name: "email", type: "varchar" },
-        { name: "country_code", type: "varchar", isForeign: true },
-        { name: "created_at", type: "timestamp" },
+        { name: "kindness_score", type: "decimal" }, // ❤️
+        { name: "response_time", type: "varchar" }, // “within 24h”
+        { name: "company_id", type: "int", isForeign: true },
+        { name: "favorite_quote", type: "varchar" },
       ],
     },
   },
   {
-    id: "countries",
+    id: "interviews",
     type: "tableNode",
-    position: { x: 800, y: 570 },
+    position: { x: 100, y: 460 },
     data: {
-      label: "countries",
+      label: "interviews",
       fields: [
-        { name: "code", type: "varchar", isPrimary: true },
+        { name: "id", type: "int", isPrimary: true },
+        { name: "candidate_id", type: "int", isForeign: true },
+        { name: "job_posting_id", type: "int", isForeign: true },
+        { name: "interviewer_name", type: "varchar" },
+        { name: "topics_discussed", type: "json" },
+        { name: "candidate_strength", type: "varchar" },
+        { name: "feedback", type: "varchar" },
+        { name: "outcome", type: "varchar" },
+      ],
+    },
+  },
+  {
+    id: "career_tips",
+    type: "tableNode",
+    position: { x: 480, y: 500 },
+    data: {
+      label: "career_tips",
+      fields: [
+        { name: "id", type: "int", isPrimary: true },
+        { name: "shared_by_hr_id", type: "int", isForeign: true },
+        { name: "title", type: "varchar" },
+        { name: "content", type: "text" },
+        { name: "times_shared", type: "int" },
+      ],
+    },
+  },
+  {
+    id: "companies",
+    type: "tableNode",
+    position: { x: 850, y: 570 },
+    data: {
+      label: "companies",
+      fields: [
+        { name: "id", type: "int", isPrimary: true },
         { name: "name", type: "varchar" },
-        { name: "continent_name", type: "varchar" },
-        { name: "currency", type: "varchar" },
+        { name: "industry", type: "varchar" },
+        { name: "mission", type: "varchar" },
+        { name: "employee_happiness_index", type: "decimal" },
+        { name: "active_job_postings", type: "int" },
       ],
     },
   },
 ];
 
-// Define the edges (relationships) between tables with specific column connections
 export const initialEdges: Edge[] = [
-  // User to Orders (one-to-many): users.id -> orders.user_id
+  // Candidates apply for job postings
   {
-    id: "users-orders",
-    source: "users",
-    target: "orders",
+    id: "candidates-job_postings",
+    source: "candidates",
+    target: "job_postings",
+    sourceHandle: "applied_role_id",
+    targetHandle: "id",
+  },
+  // Recruiters post job listings
+  {
+    id: "recruiters-job_postings",
+    source: "recruiters",
+    target: "job_postings",
     sourceHandle: "id",
-    targetHandle: "user_id",
+    targetHandle: "hr_id",
   },
-  // Orders to Order Items (one-to-many): orders.id -> order_items.order_id
+  // Candidates attend interviews
   {
-    id: "orders-order_items",
-    source: "orders",
-    target: "order_items",
+    id: "candidates-interviews",
+    source: "candidates",
+    target: "interviews",
     sourceHandle: "id",
-    targetHandle: "order_id",
+    targetHandle: "candidate_id",
   },
-  // Products to Order Items (one-to-many): products.id -> order_items.product_id
+  // Job postings have interviews
   {
-    id: "products-order_items",
-    source: "products",
-    target: "order_items",
+    id: "job_postings-interviews",
+    source: "job_postings",
+    target: "interviews",
     sourceHandle: "id",
-    targetHandle: "product_id",
+    targetHandle: "job_posting_id",
   },
-  // Merchants to Products (one-to-many): merchants.id -> products.merchant_id
+  // Recruiters share career tips
   {
-    id: "merchants-products",
-    source: "merchants",
-    target: "products",
+    id: "recruiters-career_tips",
+    source: "recruiters",
+    target: "career_tips",
     sourceHandle: "id",
-    targetHandle: "merchant_id",
+    targetHandle: "shared_by_hr_id",
   },
-  // Countries to Users (one-to-many): countries.code -> users.country_code
+  // Companies hire recruiters
   {
-    id: "countries-users",
-    source: "countries",
-    target: "users",
-    sourceHandle: "code",
-    targetHandle: "country_code",
+    id: "companies-recruiters",
+    source: "companies",
+    target: "recruiters",
+    sourceHandle: "id",
+    targetHandle: "company_id",
   },
-  // Countries to Merchants (one-to-many): countries.code -> merchants.country_code
+  // Companies post job listings
   {
-    id: "countries-merchants",
-    source: "countries",
-    target: "merchants",
-    sourceHandle: "code",
-    targetHandle: "country_code",
+    id: "companies-job_postings",
+    source: "companies",
+    target: "job_postings",
+    sourceHandle: "id",
+    targetHandle: "company_id",
+  },
+  // Companies hire candidates
+  {
+    id: "companies-candidates",
+    source: "companies",
+    target: "candidates",
+    sourceHandle: "id",
+    targetHandle: "hired_company_id",
   },
 ];

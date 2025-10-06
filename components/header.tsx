@@ -17,9 +17,9 @@ import { FaLinkedin, FaGithub , FaEnvelope } from 'react-icons/fa'
 
 const menuItems = [
     { name: 'About', href: '#link' },
-    { name: 'Projects', href: '#link' },
-    { name: 'Certifications', href: '#link' },
-    { name: 'Interests', href: '#link' },
+    // { name: 'Projects', href: '#link' },
+    // { name: 'Certifications', href: '#link' },
+    // { name: 'Interests', href: '#link' },
     { name: 'Resume', href: 'https://drive.google.com/file/d/1Mjz5lEsKy5WWG1OK0Tqrpj61F3x9OMpd/view?usp=sharing' },
 ]
 
