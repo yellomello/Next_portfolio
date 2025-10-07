@@ -390,6 +390,17 @@ export default function HeroSection() {
   shimmerDuration="2s"
   className="shadow-2xl"
 />
+ {/* <a href="https://drive.google.com/file/d/1Mjz5lEsKy5WWG1OK0Tqrpj61F3x9OMpd/view" target="_blank" rel="noopener noreferrer">
+  <Button
+    // defaultText="View Resumé"
+    // shimmerColor="purple"
+    // shimmerColor2="green"
+    // shimmerDuration="2s"
+    // className="shadow-2xl"
+  />
+</a> */}
+
+
 
     </div>
                         

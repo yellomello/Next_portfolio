@@ -29,8 +29,8 @@ export const InteractiveShimmerButton2 = React.forwardRef<
   (
     {
       defaultText,
-      hoverText = "Copy Email",
-      clickedText = "Copied!",
+      hoverText = "",
+      clickedText = "",
       copyText,
       shimmerColor0 = "white",
       shimmerColor1 = "white",

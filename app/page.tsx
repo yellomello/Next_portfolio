@@ -1,5 +1,6 @@
 'use client';
 
+import { AnimatedGradientText } from "@/components/ui/animated-gradient-text";
 import { ParticleTextEffect } from "@/components/interactive-text-particle";
 import React, { useState } from "react";
 import HeroSection from "@/components/hero-section";
@@ -28,6 +29,8 @@ import { GlowCard } from "@/components/spotlight-card";
 // import { InteractiveShimmerButton2 } from "@/components/ui/interactive-shimmer";
 import SchemaVisualizer from "@/components/schema-viz";
 import { ImageSwiper  } from "@/components/image-swiper";
+import LogoCloud3 from "@/components/ui/logo-cloud3";
+import LogoCloud4 from "@/components/ui/logo-cloud-4";
 
 const imageUrls = "https://img.freepik.com/premium-photo/3d-cartoon_975306-1.jpg?w=2000,https://img.freepik.com/premium-photo/3d-cartoon-boy-avatar_113255-5540.jpg,https://th.bing.com/th/id/OIP.OmBLyKbo8iixJ2SeS12xxwHaE7?w=626&h=417&rs=1&pid=ImgDetMain,https://thumbs.dreamstime.com/b/animated-academic-cheerful-cartoon-scholar-301088562.jpg,https://img.freepik.com/premium-psd/3d-cute-young-business-man-character-generative-ai_43614-1027.jpg,https://img.freepik.com/premium-photo/arafed-cartoon-man-suit-tie-standing-with-his-hands-his-hips_988987-15581.jpg";
 
@@ -67,18 +70,28 @@ export default function Home() {
         
       <MLogo size={72} withBackground={false} />
       
-      <ParticleTextEffect
+      {/* <ParticleTextEffect
         text="PROJECTS"
         // className="absolute top-0 left-0"
         // colors={['ff6b6b', 'feca57', '48dbfb', '1dd1a1']}
           colors = {['f8f9fa', 'ff9ff3', '9b5de5', '4a69bd', '341f97', '706fd3', 'c56cf0', '54a0ff', 'ffffff']}
 // colors = ['f8f9fa', 'ff9ff3', '9b5de5', '4a69bd', '341f97', '706fd3', 'c56cf0', '54a0ff', 'ffffff'];
 
-      />
-
+      /> */}
+<div className="flex mb-40 justify-center z-40">
+  <AnimatedGradientText
+    speed={2}
+    colorFrom="#606060"
+    colorTo="#FFFFFF"
+    className="text-4xl font-semibold tracking-tight"
+  >
+    Projects
+  </AnimatedGradientText>
+</div>
 
       {/* <LogoCloudLarge /> */}
-      <div className="w-screen h-screen flex flex-row items-center justify-center gap-10 custom-cursor">
+      <div className="w-screen mt-18 mb-18 flex flex-row items-center justify-center gap-10 custom-cursor">
+      
       <GlowCard></GlowCard>
       <GlowCard></GlowCard>
       <GlowCard></GlowCard>
@@ -105,7 +118,7 @@ export default function Home() {
     </div>
   
 
-      <main className="w-full h-screen bg-gray-900 relative">
+      {/* <main className="w-full h-screen bg-gray-900 relative"> */}
   {/* <div
     className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50"
     >
@@ -115,7 +128,7 @@ export default function Home() {
     openApps={openApps}
     />
     </div> */}
-</main>
+{/* </main> */}
 
       {/* <Comparison_Example /> */}
       {/* <LogoCloud2 /> */}
@@ -123,24 +136,31 @@ export default function Home() {
      {/* <div className="flex items-center justify-center min-h-screen">
       <ImageSwiper images={imageUrls} />
       </div> */}
-<ParticleTextEffect
-        text="Certifications"
-        // className="absolute top-0 left-0"
-        // colors={['ff6b6b', 'feca57', '48dbfb', '1dd1a1']}
-          colors = {['f8f9fa', 'ff9ff3', '9b5de5', '4a69bd', '341f97', '706fd3', 'c56cf0', '54a0ff', 'ffffff']}
-// colors = ['f8f9fa', 'ff9ff3', '9b5de5', '4a69bd', '341f97', '706fd3', 'c56cf0', '54a0ff', 'ffffff'];
+{/* <div className="flex mt-40 justify-center z-40">
+  <AnimatedGradientText
+    speed={2}
+    colorFrom="#606060"
+    colorTo="#FFFFFF"
+    className="text-4xl font-semibold tracking-tight"
+  >
+    Selected Certifications
+  </AnimatedGradientText>
+</div> */}
 
-      />
       <InfiniteCerts />
 
-      <LogoCloud />
+      <InfiniteQuotes />
+      {/* <LogoCloud />
+      <LogoCloud3 />
+      <LogoCloud4 />
+      
+       */}
       {/* <MacbookScroll /> */}
       {/* <LogoCloudFullPage1 /> */}
       {/* <CardSliderFullPage /> */}
       {/* <LogoCloudCards1 /> */}
       {/* <WorldMap /> */}
       <FooterSection />
-      <InfiniteQuotes />
 
       
     </>

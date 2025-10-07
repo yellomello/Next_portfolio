@@ -131,9 +131,27 @@ export default function LogoCloud() {
 
                             <div className="flex">
                                 <img
-                                    className="mx-auto h-7 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/openai.svg"
-                                    alt="OpenAI Logo"
+                                    className="mx-auto h-7 w-fit "
+                                    src="/Selenium_logo.svg.png"
+                                    alt="Selenium Logo"
+                                    height="24"
+                                    width="auto"
+                                />
+                            </div>
+                            <div className="flex">
+                                <img
+                                    className="mx-auto h-7 w-fit "
+                                    src="/Selenium_logo.svg.png"
+                                    alt="Oracle Logo"
+                                    height="24"
+                                    width="auto"
+                                />
+                            </div>
+                            <div className="flex">
+                                <img
+                                    className="mx-auto h-7 w-fit "
+                                    src="/Selenium_logo.svg.png"
+                                    alt="Selenium Logo"
                                     height="24"
                                     width="auto"
                                 />
