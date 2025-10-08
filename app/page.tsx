@@ -82,9 +82,9 @@ export default function Home() {
  
 {/* Selected Projects Section *#######################################################################################################################/}
 
+{/* Heading */}
 <div className="flex flex-col items-center mb-24 relative">
-  {/* Heading */}
-  {/* <div className="flex items-center gap-4">
+  <div className="flex items-center gap-4">
     <AnimatedGradientText
       speed={2}
       colorFrom="#606060"
@@ -95,25 +95,25 @@ export default function Home() {
       <br />
       ___________________
     </AnimatedGradientText>
-  </div> */}
+  </div>
 
   {/* Glow Cards */}
-  {/* <div className="w-screen mt-8 flex flex-row flex-wrap items-center justify-center gap-10 custom-cursor relative z-10">
+  <div className="w-screen mt-8 flex flex-row flex-wrap items-center justify-center gap-10 custom-cursor relative z-10">
+    {/* <GlowCard />
     <GlowCard />
     <GlowCard />
-    <GlowCard />
-    <GlowCard />
+    <GlowCard /> */}
     <ExpandableGlowCards />
-  </div> */}
+  </div>
 
   {/* "See all" link */}
-  {/* <a
+  <a
     href="/projects"
     className="mt-10 text-sm text-gray-400 hover:text-white transition-colors duration-300 underline underline-offset-4"
   >
     See all →
   </a>
-</div> */}
+</div>
 {/* Selected Projects Section End *#######################################################################################################################/}
 
 

@@ -25,7 +25,7 @@ export default function ExpandableGlowCards() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-md z-40"
+            className="fixed inset-0 bg-black/90 z-40"
             onClick={() => setActive(null)}
           />
         )}
@@ -41,7 +41,7 @@ export default function ExpandableGlowCards() {
   initial={{ opacity: 0, scale: 0.95 }}
   animate={{ opacity: 1, scale: 1 }}
   exit={{ opacity: 0, scale: 0.95 }}
-  className="bg-neutral-900 text-white rounded-3xl shadow-2xl overflow-hidden 
+  className="bg-black-900 text-white rounded-3xl shadow-2xl overflow-hidden 
              w-[95%] md:w-[80%] lg:w-[65%] xl:w-[55%] flex flex-col border border-white/10 backdrop-blur-xl"
   transition={{ type: "spring", stiffness: 120, damping: 20 }}
 >
@@ -98,7 +98,7 @@ export default function ExpandableGlowCards() {
 const cards = [
   {
     title: "Client Project:  Pharmaceutical Data Analysis (Bayshore Healthcare)",
-    description: "Bayshore Healthcare",
+    description: "PowerBI | DAX | Citrix | Kroll | SQL Server",
     src: "/bayshore.png",
     content: () => (
       <p>
@@ -113,24 +113,50 @@ Created a multipage active Dashboard with toolbars and enhanced UI/UX.
     ),
   },
   {
-    title: "Metallica",
-    description: "For Whom The Bell Tolls",
-    src: "https://assets.aceternity.com/demos/metallica.jpeg",
+   title: "Twitter ETL Pipeline - AWS, Apache Airflow",
+    description: "",
+    src: "/twitter.jpg",
     content: () => (
       <p>
-        Metallica shaped the sound of heavy metal with their powerful riffs and
-        dark social commentary. True legends of the genre.
+       Tools: Power BI, Excel, Citrix, Kroll
+Client: Bayshore Healthcare/Manulife
+Performed data cleaning and preprocessing on real-time Pharmaceutical data.
+Used DAX for business logic and measuring various metrics.
+Created a multipage active Dashboard with toolbars and enhanced UI/UX.
+
+*The data used in the following dashboard is masked and is a subset of the actual data for securing business data and Personal Identifiable Information (PII)
+      </p>
+    ), 
+  },
+  {
+   title: "Kafka and Spark Streaming ETL Pipeline using Hive Tables",
+    description: "",
+    src: "/kafka.jpg",
+    content: () => (
+      <p>
+       Tools: Power BI, Excel, Citrix, Kroll
+Client: Bayshore Healthcare/Manulife
+Performed data cleaning and preprocessing on real-time Pharmaceutical data.
+Used DAX for business logic and measuring various metrics.
+Created a multipage active Dashboard with toolbars and enhanced UI/UX.
+
+*The data used in the following dashboard is masked and is a subset of the actual data for securing business data and Personal Identifiable Information (PII)
       </p>
     ),
   },
   {
-    title: "Led Zeppelin",
-    description: "Stairway to Heaven",
-    src: "https://assets.aceternity.com/demos/led-zeppelin.jpeg",
+   title: "Live Cryptocurrency Tracker Web App ",
+    description: "",
+    src: "/bitcoin.jpg",
     content: () => (
       <p>
-        A timeless classic. Led Zeppelin’s music continues to define rock’s
-        golden age through masterful composition and unmatched artistry.
+       Tools: Power BI, Excel, Citrix, Kroll
+Client: Bayshore Healthcare/Manulife
+Performed data cleaning and preprocessing on real-time Pharmaceutical data.
+Used DAX for business logic and measuring various metrics.
+Created a multipage active Dashboard with toolbars and enhanced UI/UX.
+
+*The data used in the following dashboard is masked and is a subset of the actual data for securing business data and Personal Identifiable Information (PII)
       </p>
     ),
   },
