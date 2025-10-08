@@ -15,7 +15,7 @@ export default function LogoCloud() {
                             speed={200}
                             gap={112}>
                             
-                            <div className="flex">
+                            {/* <div className="flex">
                                 <img
                                     className="mx-auto h-7 w-fit dark:invert scale-400"
                                     src="/dockersvg.svg"
@@ -23,7 +23,7 @@ export default function LogoCloud() {
                                     height="20"
                                     width="auto"
                                 />
-                            </div>
+                            </div> */}
                             <div className="flex">
                                 <img
                                     className="mx-auto h-7 w-fit  scale-120"
@@ -138,7 +138,7 @@ export default function LogoCloud() {
                                     width="auto"
                                 />
                             </div>
-                            <div className="flex">
+                            {/* <div className="flex">
                                 <img
                                     className="mx-auto h-7 w-fit "
                                     src="/Selenium_logo.svg.png"
@@ -146,7 +146,7 @@ export default function LogoCloud() {
                                     height="24"
                                     width="auto"
                                 />
-                            </div>
+                            </div> */}
                             <div className="flex">
                                 <img
                                     className="mx-auto h-7 w-fit "
