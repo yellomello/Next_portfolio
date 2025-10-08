@@ -32,6 +32,9 @@ import { ImageSwiper  } from "@/components/image-swiper";
 import LogoCloud3 from "@/components/ui/logo-cloud3";
 import LogoCloud4 from "@/components/ui/logo-cloud-4";
 import ExpandableGlowCards from "@/components/expandableglowcard";
+import ExpandableGlowCards2 from "@/components/expandableglowcards2";
+// import ExpandableGlowCards from "@/components/expandableglowcard";
+import ExpandableGlowCards3D from "@/components/expandableglowcards3d";
 
 const imageUrls = "https://img.freepik.com/premium-photo/3d-cartoon_975306-1.jpg?w=2000,https://img.freepik.com/premium-photo/3d-cartoon-boy-avatar_113255-5540.jpg,https://th.bing.com/th/id/OIP.OmBLyKbo8iixJ2SeS12xxwHaE7?w=626&h=417&rs=1&pid=ImgDetMain,https://thumbs.dreamstime.com/b/animated-academic-cheerful-cartoon-scholar-301088562.jpg,https://img.freepik.com/premium-psd/3d-cute-young-business-man-character-generative-ai_43614-1027.jpg,https://img.freepik.com/premium-photo/arafed-cartoon-man-suit-tie-standing-with-his-hands-his-hips_988987-15581.jpg";
 
@@ -69,7 +72,7 @@ export default function Home() {
       {/* <MagnetLines /> */}
       <HeroSection />
         
-      <MLogo size={72} withBackground={false} />
+      {/* <MLogo size={72} withBackground={false} /> */}
       
       {/* <ParticleTextEffect
         text="PROJECTS"
@@ -84,34 +87,37 @@ export default function Home() {
 
 {/* Heading */}
 <div className="flex flex-col items-center mb-24 relative">
-  <div className="flex items-center gap-4">
+  <div className="z-10 flex items-center gap-4">
     <AnimatedGradientText
       speed={2}
       colorFrom="#606060"
       colorTo="#FFFFFF"
       className="text-4xl mt-12 mb-4 font-semibold tracking-tight relative z-[9999]"
     >
-      Selected Projects
+      {/* Selected  */}
+      Projects
       <br />
-      ___________________
+      _________
     </AnimatedGradientText>
   </div>
 
   {/* Glow Cards */}
-  <div className="w-screen mt-8 flex flex-row flex-wrap items-center justify-center gap-10 custom-cursor relative z-10">
+  <div className="z-50 w-screen mt-8 flex flex-row flex-wrap items-center justify-center gap-10 custom-cursor relative ">
     {/* <GlowCard />
     <GlowCard />
     <GlowCard />
     <GlowCard /> */}
     <ExpandableGlowCards />
+    {/* <ExpandableGlowCards2 /> */}
+    {/* <ExpandableGlowCards3D/> */}
   </div>
 
   {/* "See all" link */}
   <a
-    href="/projects"
+    // href="/projects"
     className="mt-10 text-sm text-gray-400 hover:text-white transition-colors duration-300 underline underline-offset-4"
   >
-    See all →
+    Agentic AI and Data Processing Projects Coming Soon
   </a>
 </div>
 {/* Selected Projects Section End *#######################################################################################################################/}

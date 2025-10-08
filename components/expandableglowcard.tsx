@@ -41,8 +41,8 @@ export default function ExpandableGlowCards() {
   initial={{ opacity: 0, scale: 0.95 }}
   animate={{ opacity: 1, scale: 1 }}
   exit={{ opacity: 0, scale: 0.95 }}
-  className="bg-black-900 text-white rounded-3xl shadow-2xl overflow-hidden 
-             w-[95%] md:w-[80%] lg:w-[65%] xl:w-[55%] flex flex-col border border-white/10 backdrop-blur-xl"
+  className="bg-black-200 text-white rounded-3xl shadow-2xl overflow-hidden 
+             w-[95%] md:w-[80%] lg:w-[65%] xl:w-[55%] flex flex-col border border-white/50 backdrop-blur-xl"
   transition={{ type: "spring", stiffness: 120, damping: 20 }}
 >
   <div className="relative w-full">
@@ -98,7 +98,7 @@ export default function ExpandableGlowCards() {
 const cards = [
   {
     title: "Client Project:  Pharmaceutical Data Analysis (Bayshore Healthcare)",
-    description: "PowerBI | DAX | Citrix | Kroll | SQL Server",
+    description: "",
     src: "/bayshore.png",
     content: () => (
       <p>

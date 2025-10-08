@@ -1,0 +1,142 @@
+"use client";
+
+import React, { useEffect, useRef, useState, useId } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { GlowCard } from "./spotlight-card";
+import { useOutsideClick } from "@/hooks/use-outside-click";
+import { CardContainer, CardItem } from "./ui/3d-card";
+
+export default function ExpandableGlowCards3D() {
+  const [active, setActive] = useState<(typeof cards)[number] | null>(null);
+  const ref = useRef<HTMLDivElement>(null);
+  const id = useId();
+
+  useOutsideClick(ref, () => setActive(null));
+
+  useEffect(() => {
+    if (active) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "auto";
+  }, [active]);
+
+  return (
+    <>
+      {/* Backdrop */}
+      <AnimatePresence>
+        {active && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/90 z-40"
+            onClick={() => setActive(null)}
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Expanded Card */}
+      <AnimatePresence>
+        {active && (
+          <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
+            <motion.div
+              layoutId={`card-${active.title}-${id}`}
+              ref={ref}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              className="bg-neutral-900 text-white rounded-3xl shadow-2xl overflow-hidden w-full max-w-4xl flex flex-col border border-white/10 backdrop-blur-xl"
+              transition={{ type: "spring", stiffness: 120, damping: 20 }}
+            >
+              <div className="relative w-full">
+                <img
+                  src={active.src}
+                  alt={active.title}
+                  className="w-full h-auto max-h-[75vh] object-contain rounded-t-3xl"
+                />
+                <button
+                  className="absolute top-4 right-6 text-white/80 hover:text-white text-3xl transition-colors"
+                  onClick={() => setActive(null)}
+                >
+                  ✕
+                </button>
+              </div>
+
+              <div className="p-8">
+                <h2 className="text-3xl font-bold mb-4">{active.title}</h2>
+                <p className="text-gray-400 mb-6 text-lg leading-relaxed">
+                  {active.description}
+                </p>
+                <div className="text-sm md:text-base leading-relaxed space-y-4">
+                  {active.content()}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      {/* Glow Cards Grid with 3D */}
+      <div className="flex flex-wrap justify-center gap-10 mt-10">
+        {cards.map((card) => (
+          <motion.div
+            key={card.title}
+            layoutId={`card-${card.title}-${id}`}
+            className="cursor-pointer"
+            onClick={() => setActive(card)}
+          >
+            <CardContainer className="w-64 h-80">
+              <CardItem>
+                <GlowCard className="flex flex-col justify-end p-6 w-full h-full">
+                  <div>
+                    <h3 className="text-xl font-semibold">{card.title}</h3>
+                    <p className="text-gray-400">{card.description}</p>
+                  </div>
+                </GlowCard>
+              </CardItem>
+            </CardContainer>
+          </motion.div>
+        ))}
+      </div>
+    </>
+  );
+}
+
+const cards = [
+  {
+    title: "Client Project: Pharmaceutical Data Analysis",
+    description: "PowerBI | DAX | Citrix | Kroll | SQL Server",
+    src: "/bayshore.png",
+    content: () => (
+      <p>
+        Tools: Power BI, Excel, Citrix, Kroll. Client: Bayshore Healthcare/Manulife.
+        Performed data cleaning and preprocessing on real-time Pharmaceutical data.
+        Used DAX for business logic and measuring various metrics.
+        Created a multipage active Dashboard with toolbars and enhanced UI/UX.
+        *The data used is masked for security.
+      </p>
+    ),
+  },
+  {
+    title: "Twitter ETL Pipeline - AWS, Apache Airflow",
+    description: "",
+    src: "/twitter.jpg",
+    content: () => (
+      <p>Twitter ETL pipeline content...</p>
+    ),
+  },
+  {
+    title: "Kafka and Spark Streaming ETL Pipeline",
+    description: "",
+    src: "/kafka.jpg",
+    content: () => (
+      <p>Kafka & Spark ETL content...</p>
+    ),
+  },
+  {
+    title: "Live Cryptocurrency Tracker Web App",
+    description: "",
+    src: "/bitcoin.jpg",
+    content: () => (
+      <p>Crypto Tracker Web App content...</p>
+    ),
+  },
+];

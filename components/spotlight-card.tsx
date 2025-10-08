@@ -3,7 +3,7 @@ import React, { useEffect, useRef, ReactNode } from 'react';
 interface GlowCardProps {
   children: ReactNode;
   className?: string;
-  glowColor?: 'blue' | 'purple' | 'green' | 'red' | 'yello';
+  glowColor?: 'blue' | 'purple' | 'green' | 'red' | 'yellow';
   size?: 'sm' | 'md' | 'lg';
   width?: string | number;
   height?: string | number;
@@ -68,7 +68,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
       '--spread': spread,
       '--radius': '14',
       '--border': '3',
-      '--backdrop': 'hsl(0 0% 60% / 0.12)',
+      '--backdrop': 'hsl(0 0% 5% / 0.50)',
       '--backup-border': 'var(--backdrop)',
       '--size': '200',
       '--outer': '1',
