@@ -78,45 +78,39 @@ export default function Home() {
 // colors = ['f8f9fa', 'ff9ff3', '9b5de5', '4a69bd', '341f97', '706fd3', 'c56cf0', '54a0ff', 'ffffff'];
 
       /> */}
-<div className="flex mb-40 justify-center z-40">
-  <AnimatedGradientText
-    speed={2}
-    colorFrom="#606060"
-    colorTo="#FFFFFF"
-    className="text-4xl font-semibold tracking-tight"
+{/* Selected Projects Section */}
+<div className="flex flex-col items-center mb-24 relative">
+  {/* Heading */}
+  <div className="flex items-center gap-4">
+    <AnimatedGradientText
+      speed={2}
+      colorFrom="#606060"
+      colorTo="#FFFFFF"
+      className="text-4xl mt-12 mb-4 font-semibold tracking-tight relative z-[9999]"
+    >
+      Selected Projects
+      <br />
+      ___________________
+    </AnimatedGradientText>
+  </div>
+
+  {/* Glow Cards */}
+  <div className="w-screen mt-8 flex flex-row flex-wrap items-center justify-center gap-10 custom-cursor relative z-10">
+    <GlowCard />
+    <GlowCard />
+    <GlowCard />
+    <GlowCard />
+  </div>
+
+  {/* "See all" link */}
+  <a
+    href="/projects"
+    className="mt-10 text-sm text-gray-400 hover:text-white transition-colors duration-300 underline underline-offset-4"
   >
-    Projects
-  </AnimatedGradientText>
+    See all →
+  </a>
 </div>
 
-      {/* <LogoCloudLarge /> */}
-      <div className="w-screen mt-18 mb-18 flex flex-row items-center justify-center gap-10 custom-cursor">
-      
-      <GlowCard></GlowCard>
-      <GlowCard></GlowCard>
-      <GlowCard></GlowCard>
-      <GlowCard></GlowCard>
-
-
-      {/* <InteractiveHoverButton >
-        Copy Email </InteractiveHoverButton> */}
-{/* <InteractiveHoverButton
-  beforeText="Contact Me"
-  afterText="Copy Email"
-  onClick={async () => {
-    try {
-      await navigator.clipboard.writeText("hanselmarc9@gmail.com")
-      alert("Email copied!") // or use a toast library
-    } catch (err) {
-      alert("Failed to copy email")
-      }
-      }}
-/> */}
-
-
-
-    </div>
-  
 
       {/* <main className="w-full h-screen bg-gray-900 relative"> */}
   {/* <div

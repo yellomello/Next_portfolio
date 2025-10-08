@@ -33,7 +33,8 @@ export function InfiniteCerts() {
         colorTo="#FFFFFF"
         className="text-4xl font-semibold tracking-tight"
       >
-        Selected Certifications
+        Selected Certifications<br></br>
+        ________________________
       </AnimatedGradientText>
 
       {/* Infinite Moving Certificates */}
