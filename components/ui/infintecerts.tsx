@@ -42,7 +42,7 @@ export function InfiniteCerts() {
       </AnimatedGradientText>
 
       {/* Infinite Moving Certificates */}
-      <InfiniteMovingCerts items={images} direction="right" speed="slow" />
+      <InfiniteMovingCerts items={images} direction="right" speed="normal" />
      {/* <a
   href="/certifications"
   className="mt-10 text-sm text-gray-800 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white transition-colors duration-300   flex items-center gap-1"
