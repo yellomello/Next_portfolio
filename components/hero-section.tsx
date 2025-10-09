@@ -288,7 +288,7 @@ export default function HeroSection() {
   If you are a founder or an engineer looking to bring down Google, we already have a lot in common. Let's hop on a zoom meeting.
 </TextEffect>
 
-<TextEffect
+{/* <TextEffect
   per="line"
   preset="fade-in-blur"
   speedSegment={0.3}
@@ -298,7 +298,7 @@ export default function HeroSection() {
 >
   If you are from Google, you might wanna watch out. - Marc Thomas
    
-</TextEffect>
+</TextEffect> */}
 
 
                                 <AnimatedGroup

@@ -43,12 +43,12 @@ export function InfiniteCerts() {
 
       {/* Infinite Moving Certificates */}
       <InfiniteMovingCerts items={images} direction="right" speed="slow" />
-     <a
+     {/* <a
   href="/certifications"
   className="mt-10 text-sm text-gray-800 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white transition-colors duration-300   flex items-center gap-1"
 >
   See All <span className="inline-block transform transition-transform duration-300 hover:translate-x-1">→</span>
-</a>
+</a> */}
 
     </div>
   );
