@@ -383,7 +383,7 @@ export default function HeroSection() {
                          <InteractiveShimmerButton2
   defaultText="Contact Me"
   hoverText="Copy Email"
-  clickedText="Copied!"
+  clickedText="Email Copied!"
   copyText="your-email3@example.com"
   shimmerColor="purple"
   shimmerColor2="green"
