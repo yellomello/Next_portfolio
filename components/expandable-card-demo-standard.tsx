@@ -209,7 +209,7 @@ const cards = [
     description: "How many tries did it take you to reach the green ball?",
     title: "Difficult Game",
     src: "/game1.png",
-    ctaText: "Play",
+    ctaText: "View",
     ctaLink: "https://100-daysof-db-q4r2.vercel.app/",
     content: () => {
       return (
@@ -231,70 +231,43 @@ const cards = [
     },
   },
   {
-    description: "Lana Del Rey",
-    title: "Summertime Sadness1",
-    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    ctaText: "Play",
-    ctaLink: "https://ui.aceternity.com/templates",
+    description: "I made this notebook while learning Linear Algebra to plot and experiment with various vector fields. ",
+    title: "Experiments on the types of 2D and 3D Vector Field Plots",
+    src: "/vector1.png",
+    ctaText: "View",
+    ctaLink: "https://colab.research.google.com/drive/1rujedMEEAjrZe4Yo0dHx7WuUISgZ7CYL?usp=sharing",
     content: () => {
       return (
         <p>
-          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
-          her melancholic and cinematic music style. Born Elizabeth Woolridge
-          Grant in New York City, she has captivated audiences worldwide with
-          her haunting voice and introspective lyrics. <br /> <br /> Her songs
-          often explore themes of tragic romance, glamour, and melancholia,
-          drawing inspiration from both contemporary and vintage pop culture.
-          With a career that has seen numerous critically acclaimed albums, Lana
-          Del Rey has established herself as a unique and influential figure in
-          the music industry, earning a dedicated fan base and numerous
-          accolades.
+        
         </p>
       );
     },
   },
   {
-    description: "Lana Del Rey",
-    title: "Summertime Sadness2",
-    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    ctaText: "Play",
-    ctaLink: "https://ui.aceternity.com/templates",
+    description: "I followed this tutorial exactly as is to learn the various techniques involved in handling Time series data. ",
+    title: "Time Series Analysis : Data Science Notebook",
+    src: "/timeseries.png",
+    ctaText: "View",
+    ctaLink: "https://colab.research.google.com/github/srivatsan88/End-to-End-Time-Series-/blob/master/Timeseries_Data_analysis.ipynb",
     content: () => {
       return (
         <p>
-          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
-          her melancholic and cinematic music style. Born Elizabeth Woolridge
-          Grant in New York City, she has captivated audiences worldwide with
-          her haunting voice and introspective lyrics. <br /> <br /> Her songs
-          often explore themes of tragic romance, glamour, and melancholia,
-          drawing inspiration from both contemporary and vintage pop culture.
-          With a career that has seen numerous critically acclaimed albums, Lana
-          Del Rey has established herself as a unique and influential figure in
-          the music industry, earning a dedicated fan base and numerous
-          accolades.
+          
         </p>
       );
     },
   },
   {
-    description: "Lana Del Rey",
-    title: "Summertime Sadness3",
-    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    ctaText: "Play",
-    ctaLink: "https://ui.aceternity.com/templates",
+    description: "",
+    title: "Image Alignment Problem using Linear Algebra and Computer Vision(openCV)",
+    src: "/opencv.png",
+    ctaText: "View",
+    ctaLink: "https://drive.google.com/file/d/1cQqOYar7ZlPB6XRAdPHur4bLmPPdr59w/view?usp=sharing",
     content: () => {
       return (
         <p>
-          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
-          her melancholic and cinematic music style. Born Elizabeth Woolridge
-          Grant in New York City, she has captivated audiences worldwide with
-          her haunting voice and introspective lyrics. <br /> <br /> Her songs
-          often explore themes of tragic romance, glamour, and melancholia,
-          drawing inspiration from both contemporary and vintage pop culture.
-          With a career that has seen numerous critically acclaimed albums, Lana
-          Del Rey has established herself as a unique and influential figure in
-          the music industry, earning a dedicated fan base and numerous
-          accolades.
+          
         </p>
       );
     },
