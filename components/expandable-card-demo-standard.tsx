@@ -3,6 +3,7 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import Image from 'next/image';
 
 export default function ExpandableCardDemo() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -205,8 +206,378 @@ export const CloseIcon = () => {
 
 const cards = [
   {
+    description: "How many tries did it take you to reach the green ball?",
+    title: "Difficult Game",
+    src: "/game1.png",
+    ctaText: "Play",
+    ctaLink: "https://100-daysof-db-q4r2.vercel.app/",
+    content: () => {
+      return (
+        <p>
+          This is a hard one and usually takes me about 10 tries just to get warmed up. My friends thought this was a prank and that there isn't any solution but that's not true. 
+           <br /> 
+           The goal is figure out the most efficient route with economy of motion.<br />
+           <br />
+           Here's a screenshot of my score. If you're wondering, Yes! I created this game and it took me 17 tries LOL!
+           <Image
+        src="/game1ss.png"       // Path to your image
+        alt="Difficult Game"  // Accessibility text
+        width={600}            // Desired width
+        height={400}           // Desired height
+        className="mt-2"       // Optional Tailwind CSS styling
+      />
+        </p>
+      );
+    },
+  },
+  {
     description: "Lana Del Rey",
-    title: "Summertime Sadness",
+    title: "Summertime Sadness1",
+    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
+          her melancholic and cinematic music style. Born Elizabeth Woolridge
+          Grant in New York City, she has captivated audiences worldwide with
+          her haunting voice and introspective lyrics. <br /> <br /> Her songs
+          often explore themes of tragic romance, glamour, and melancholia,
+          drawing inspiration from both contemporary and vintage pop culture.
+          With a career that has seen numerous critically acclaimed albums, Lana
+          Del Rey has established herself as a unique and influential figure in
+          the music industry, earning a dedicated fan base and numerous
+          accolades.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Lana Del Rey",
+    title: "Summertime Sadness2",
+    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
+          her melancholic and cinematic music style. Born Elizabeth Woolridge
+          Grant in New York City, she has captivated audiences worldwide with
+          her haunting voice and introspective lyrics. <br /> <br /> Her songs
+          often explore themes of tragic romance, glamour, and melancholia,
+          drawing inspiration from both contemporary and vintage pop culture.
+          With a career that has seen numerous critically acclaimed albums, Lana
+          Del Rey has established herself as a unique and influential figure in
+          the music industry, earning a dedicated fan base and numerous
+          accolades.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Lana Del Rey",
+    title: "Summertime Sadness3",
+    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
+          her melancholic and cinematic music style. Born Elizabeth Woolridge
+          Grant in New York City, she has captivated audiences worldwide with
+          her haunting voice and introspective lyrics. <br /> <br /> Her songs
+          often explore themes of tragic romance, glamour, and melancholia,
+          drawing inspiration from both contemporary and vintage pop culture.
+          With a career that has seen numerous critically acclaimed albums, Lana
+          Del Rey has established herself as a unique and influential figure in
+          the music industry, earning a dedicated fan base and numerous
+          accolades.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Lana Del Rey",
+    title: "Summertime Sadness4",
+    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
+          her melancholic and cinematic music style. Born Elizabeth Woolridge
+          Grant in New York City, she has captivated audiences worldwide with
+          her haunting voice and introspective lyrics. <br /> <br /> Her songs
+          often explore themes of tragic romance, glamour, and melancholia,
+          drawing inspiration from both contemporary and vintage pop culture.
+          With a career that has seen numerous critically acclaimed albums, Lana
+          Del Rey has established herself as a unique and influential figure in
+          the music industry, earning a dedicated fan base and numerous
+          accolades.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Lana Del Rey",
+    title: "Summertime Sadness5",
+    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
+          her melancholic and cinematic music style. Born Elizabeth Woolridge
+          Grant in New York City, she has captivated audiences worldwide with
+          her haunting voice and introspective lyrics. <br /> <br /> Her songs
+          often explore themes of tragic romance, glamour, and melancholia,
+          drawing inspiration from both contemporary and vintage pop culture.
+          With a career that has seen numerous critically acclaimed albums, Lana
+          Del Rey has established herself as a unique and influential figure in
+          the music industry, earning a dedicated fan base and numerous
+          accolades.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Lana Del Rey",
+    title: "Summertime Sadness6",
+    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
+          her melancholic and cinematic music style. Born Elizabeth Woolridge
+          Grant in New York City, she has captivated audiences worldwide with
+          her haunting voice and introspective lyrics. <br /> <br /> Her songs
+          often explore themes of tragic romance, glamour, and melancholia,
+          drawing inspiration from both contemporary and vintage pop culture.
+          With a career that has seen numerous critically acclaimed albums, Lana
+          Del Rey has established herself as a unique and influential figure in
+          the music industry, earning a dedicated fan base and numerous
+          accolades.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Lana Del Rey",
+    title: "Summertime Sadness7",
+    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
+          her melancholic and cinematic music style. Born Elizabeth Woolridge
+          Grant in New York City, she has captivated audiences worldwide with
+          her haunting voice and introspective lyrics. <br /> <br /> Her songs
+          often explore themes of tragic romance, glamour, and melancholia,
+          drawing inspiration from both contemporary and vintage pop culture.
+          With a career that has seen numerous critically acclaimed albums, Lana
+          Del Rey has established herself as a unique and influential figure in
+          the music industry, earning a dedicated fan base and numerous
+          accolades.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Lana Del Rey",
+    title: "Summertime Sadness8",
+    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
+          her melancholic and cinematic music style. Born Elizabeth Woolridge
+          Grant in New York City, she has captivated audiences worldwide with
+          her haunting voice and introspective lyrics. <br /> <br /> Her songs
+          often explore themes of tragic romance, glamour, and melancholia,
+          drawing inspiration from both contemporary and vintage pop culture.
+          With a career that has seen numerous critically acclaimed albums, Lana
+          Del Rey has established herself as a unique and influential figure in
+          the music industry, earning a dedicated fan base and numerous
+          accolades.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Lana Del Rey",
+    title: "Summertime Sadness9",
+    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
+          her melancholic and cinematic music style. Born Elizabeth Woolridge
+          Grant in New York City, she has captivated audiences worldwide with
+          her haunting voice and introspective lyrics. <br /> <br /> Her songs
+          often explore themes of tragic romance, glamour, and melancholia,
+          drawing inspiration from both contemporary and vintage pop culture.
+          With a career that has seen numerous critically acclaimed albums, Lana
+          Del Rey has established herself as a unique and influential figure in
+          the music industry, earning a dedicated fan base and numerous
+          accolades.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Lana Del Rey",
+    title: "Summertime Sadness10",
+    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
+          her melancholic and cinematic music style. Born Elizabeth Woolridge
+          Grant in New York City, she has captivated audiences worldwide with
+          her haunting voice and introspective lyrics. <br /> <br /> Her songs
+          often explore themes of tragic romance, glamour, and melancholia,
+          drawing inspiration from both contemporary and vintage pop culture.
+          With a career that has seen numerous critically acclaimed albums, Lana
+          Del Rey has established herself as a unique and influential figure in
+          the music industry, earning a dedicated fan base and numerous
+          accolades.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Lana Del Rey",
+    title: "Summertime Sadness11",
+    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
+          her melancholic and cinematic music style. Born Elizabeth Woolridge
+          Grant in New York City, she has captivated audiences worldwide with
+          her haunting voice and introspective lyrics. <br /> <br /> Her songs
+          often explore themes of tragic romance, glamour, and melancholia,
+          drawing inspiration from both contemporary and vintage pop culture.
+          With a career that has seen numerous critically acclaimed albums, Lana
+          Del Rey has established herself as a unique and influential figure in
+          the music industry, earning a dedicated fan base and numerous
+          accolades.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Lana Del Rey",
+    title: "Summertime Sadness12",
+    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
+          her melancholic and cinematic music style. Born Elizabeth Woolridge
+          Grant in New York City, she has captivated audiences worldwide with
+          her haunting voice and introspective lyrics. <br /> <br /> Her songs
+          often explore themes of tragic romance, glamour, and melancholia,
+          drawing inspiration from both contemporary and vintage pop culture.
+          With a career that has seen numerous critically acclaimed albums, Lana
+          Del Rey has established herself as a unique and influential figure in
+          the music industry, earning a dedicated fan base and numerous
+          accolades.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Lana Del Rey",
+    title: "Summertime Sadness13",
+    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
+          her melancholic and cinematic music style. Born Elizabeth Woolridge
+          Grant in New York City, she has captivated audiences worldwide with
+          her haunting voice and introspective lyrics. <br /> <br /> Her songs
+          often explore themes of tragic romance, glamour, and melancholia,
+          drawing inspiration from both contemporary and vintage pop culture.
+          With a career that has seen numerous critically acclaimed albums, Lana
+          Del Rey has established herself as a unique and influential figure in
+          the music industry, earning a dedicated fan base and numerous
+          accolades.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Lana Del Rey",
+    title: "Summertime Sadness14",
+    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
+          her melancholic and cinematic music style. Born Elizabeth Woolridge
+          Grant in New York City, she has captivated audiences worldwide with
+          her haunting voice and introspective lyrics. <br /> <br /> Her songs
+          often explore themes of tragic romance, glamour, and melancholia,
+          drawing inspiration from both contemporary and vintage pop culture.
+          With a career that has seen numerous critically acclaimed albums, Lana
+          Del Rey has established herself as a unique and influential figure in
+          the music industry, earning a dedicated fan base and numerous
+          accolades.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Lana Del Rey",
+    title: "Summertime Sadness15",
+    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <p>
+          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
+          her melancholic and cinematic music style. Born Elizabeth Woolridge
+          Grant in New York City, she has captivated audiences worldwide with
+          her haunting voice and introspective lyrics. <br /> <br /> Her songs
+          often explore themes of tragic romance, glamour, and melancholia,
+          drawing inspiration from both contemporary and vintage pop culture.
+          With a career that has seen numerous critically acclaimed albums, Lana
+          Del Rey has established herself as a unique and influential figure in
+          the music industry, earning a dedicated fan base and numerous
+          accolades.
+        </p>
+      );
+    },
+  },
+  {
+    description: "Lana Del Rey",
+    title: "Summertime Sadness16",
     src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
     ctaText: "Play",
     ctaLink: "https://ui.aceternity.com/templates",
