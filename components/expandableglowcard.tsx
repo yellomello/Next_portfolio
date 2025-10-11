@@ -118,7 +118,8 @@ const cards = [
           <em>
             *The data used in the following dashboard is masked and is a subset
             of the actual data to secure business data and Personal Identifiable
-            Information (PII).
+            Information (PII). <br/>
+            Also, as the data is sensitive and confidential, data files cannot be shared.
           </em>
         </p>
       </>
