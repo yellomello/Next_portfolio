@@ -86,40 +86,40 @@ export default function Home() {
 {/* Selected Projects Section *#######################################################################################################################/}
 
 {/* Heading */}
-<div className="flex flex-col items-center mb-24 relative">
+{/* <div className="flex flex-col items-center mb-24 relative">
   <div className="z-10 flex items-center gap-4">
     <AnimatedGradientText
       speed={2}
       colorFrom="#606060"
       colorTo="#FFFFFF"
       className="text-4xl mt-12 mb-4 font-semibold tracking-tight relative z-[9999]"
-    >
+    > */}
       {/* Selected  */}
-      Projects
+      {/* Projects
       <br />
       _________
     </AnimatedGradientText>
-  </div>
+  </div> */}
 
   {/* Glow Cards */}
-  <div className="z-50 w-screen mt-8 flex flex-row flex-wrap items-center justify-center gap-10 custom-cursor relative ">
+  {/* <div className="z-50 w-screen mt-8 flex flex-row flex-wrap items-center justify-center gap-10 custom-cursor relative "> */}
     {/* <GlowCard />
     <GlowCard />
     <GlowCard />
     <GlowCard /> */}
-    <ExpandableGlowCards />
+    {/* <ExpandableGlowCards /> */}
     {/* <ExpandableGlowCards2 /> */}
     {/* <ExpandableGlowCards3D/> */}
-  </div>
+  {/* </div> */}
 
   {/* "See all" link */}
-  <a
+  {/* <a
     // href="/projects"
     className="mt-10 text-sm text-gray-400 hover:text-white transition-colors duration-300 underline underline-offset-4"
   >
     Agentic AI and Data Processing Projects Coming Soon
   </a>
-</div>
+</div> */}
 {/* Selected Projects Section End *#######################################################################################################################/}
 
 
